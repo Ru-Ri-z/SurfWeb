@@ -1,0 +1,118 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app__team-container {
+    min-height: 90vh;
+    background-color: var(--purple-color);
+    padding-bottom: 40px;
+    .app__team-title-container {
+        width: 80%;
+        margin: auto;
+        padding: 40px 0;
+
+        h2 {
+            font-size: 3rem;
+            font-family: var(--font-base);
+            color: var(--darkgreen-color);
+            @media screen and (min-width: 768px){
+                font-size: 4rem;
+            }
+        }
+    }
+
+    .app__team-slider-container {
+        width: 80%;
+        margin: auto;
+
+        .app__team-slider-card {
+            background-color: var(--purple-color);
+
+            .app__team-slider-card-img {
+                width: 50%;
+                border-radius: 50%;
+                overflow: hidden;
+
+            }
+
+            .app__team-slider-card-data {
+                margin-top: 40px;
+                margin-bottom: 40px;
+
+                .app__team-slider-card-data-title {
+                    text-align: left;
+                    color: var(--white-color);
+                    font-family: var(--font-base);
+                    font-weight: 600;
+                }
+
+                .change-slider-title{
+                    color: var(--darkgreen-color);
+                }
+
+                .app__team-slider-separator {
+                    height: 2px;
+                    width: 15%;
+                    background-color: var(--white-color);
+                    margin: 20px 0;
+                }
+                .change-slider-separator{
+                    background-color: var(--darkgreen-color);
+                }
+                .app__team-slider-card-data-desc {
+                    text-align: left;
+                    color: var(--white-color);
+                    font-family: var(--font-base);
+                    font-size: .8rem;
+                    width: 85%;
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                .show-slider-desc{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: all .2s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+.arrow-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;   
+    cursor: pointer;
+    img{
+        width: 150px;
+        height: auto;
+    }
+}

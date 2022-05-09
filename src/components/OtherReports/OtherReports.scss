@@ -1,0 +1,35 @@
+.app__others-reports-container {
+    width: 100%;
+    min-height: 90vh;
+    background-color: var(--lightgray-color);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+
+    .app__others-reports-title {
+        width: 80%;
+        margin: auto;
+
+        h2 {
+            font-family: var(--font-base);
+            color: var(--purple-color);
+            font-size: 2rem;
+            width: 30%;
+            @media screen and (min-width: 768px){
+                font-size: 4rem;
+            }
+        }
+    }
+
+    .app__slider-others-reports {
+        width: 80%;
+        margin: 40px auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+        @media screen and (min-width: 768px){
+            flex-direction: row;
+        }
+    }
+}
