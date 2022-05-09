@@ -3,7 +3,7 @@ import servicesList from "./servicesList";
 import "./Services.scss";
 const Services = () => {
   return (
-    <div className="app__services-container">
+    <div className="app__services-container" id="servicios">
       <div className="app__services-container-center">
         <div className="app__services-container-title">
           <h2>A set of services designed for you</h2>

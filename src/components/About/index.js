@@ -4,7 +4,7 @@ import "../Button/Button.scss"
 import imageabout from "../../assets/jan-majer-38WeNpygZts-unsplash.webp";
 const About = () => {
   return (
-    <div className="app__about-container">
+    <div className="app__about-container" id="nosotros">
       <div className="app__about-container-data">
         <h2>Nosotros</h2>
         <p>

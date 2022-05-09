@@ -3,7 +3,7 @@ import imageContact from "../../assets/contactimage.webp";
 import "./Contact.scss";
 const Contact = () => {
   return (
-    <div className="app__contact-container">
+    <div className="app__contact-container" id="contacto">
       <div className="app__contact-container-image">
         <img src={imageContact} alt="contact" />
       </div>

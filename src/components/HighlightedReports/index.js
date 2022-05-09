@@ -12,7 +12,7 @@ import highlightedReportsList from "./highlitedReportsList";
 import SlideNextButton from "./SlideNextButton";
 const HighlightedReports = () => {
   return (
-    <div className="app__highlighted-reports-container">
+    <div className="app__highlighted-reports-container" id="reportes">
       <div className="app__highlighted-reports-title">
         <h2>Reportes destacados</h2>
       </div>

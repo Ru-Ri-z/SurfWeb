@@ -5,7 +5,7 @@ import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import "./Header.scss";
 const Header = () => {
   return (
-    <div className="app__header-container">
+    <div className="app__header-container" id="home">
       <picture style={{ margin: 0, padding: 0 }}>
         <source srcSet={backgroundImage} media="(min-width: 768px)" />
         <img
