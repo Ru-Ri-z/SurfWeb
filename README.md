@@ -1,7 +1,7 @@
 ![image](https://github.com/Ru-Ri-z/SurfWeb/blob/main/screenshots/header.png)
 ![image](https://github.com/Ru-Ri-z/SurfWeb/blob/main/screenshots/about.png)
 ![image](https://github.com/Ru-Ri-z/SurfWeb/blob/main/screenshots/staff.png)
-![image](hhttps://github.com/Ru-Ri-z/SurfWeb/blob/main/screenshots/service.png)
+![image](https://github.com/Ru-Ri-z/SurfWeb/blob/main/screenshots/service.png)
 ![image](https://github.com/Ru-Ri-z/SurfWeb/blob/main/screenshots/pdfs.png)
 ![image](https://github.com/Ru-Ri-z/SurfWeb/blob/main/screenshots/reports.png)
 ![image](https://github.com/Ru-Ri-z/SurfWeb/blob/main/screenshots/social.png)
