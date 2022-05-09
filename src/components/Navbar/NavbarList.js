@@ -1,2 +1,2 @@
-const NavbarList = ["home", "nosotros", "reportes", "servicios", "contacto"];
+const NavbarList = ["home", "nosotros", "servicios", "reportes", "contacto"];
 export default NavbarList;

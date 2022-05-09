@@ -5,7 +5,9 @@
     align-items: center;
     justify-content: center;
     background-color: var(--blue-color);
-
+    @media screen and (min-width: 768px){
+        min-height: 100vh;
+    }
     .app__services-container-center {
         width: 80%;
         display: flex;
