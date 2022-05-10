@@ -1,5 +1,6 @@
 import React from "react";
 import About from "../components/About";
+import Banner from "../components/Banner";
 import Contact from "../components/Contact";
 import Header from "../components/Header";
 import HighlightedReports from "../components/HighlightedReports";
@@ -12,6 +13,7 @@ import Team from "../components/Team";
 const Navigator = () => {
   return (
     <>
+      <Banner/>
       <Navbar />
       <Header />
       <About />

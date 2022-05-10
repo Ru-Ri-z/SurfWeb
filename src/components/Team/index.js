@@ -18,13 +18,12 @@ const Team = () => {
       </div>
       <div className="app__team-slider-container">
         <Swiper
-          slidesPerView={width > 480 ? 3 : 1}
+          slidesPerView={width > 1024 ? 3 : 1}
           spaceBetween={30}
           loop={true}
-          // pagination={{
-          //   clickable: true,
-          // }}
-
+          //pagination={{
+          //  clickable: true,
+          //}}
           modules={[Pagination]}
           className="mySwiper"
         >
@@ -53,7 +52,7 @@ const Team = () => {
                   />
                   <p
                     className={`app__team-slider-card-data-desc ${
-                      width < 480 && "show-slider-desc"
+                      width < 1024 && "show-slider-desc"
                     } ${active === idx && "show-slider-desc"}`}
                   >
                     {item.description}

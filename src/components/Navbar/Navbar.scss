@@ -3,9 +3,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem 2rem;
     position: fixed;
     z-index: 2;
+    padding-top: 10px;
 }
 .scroll-navbar{
     backdrop-filter: blur(4px);
@@ -16,11 +16,14 @@
 }
 .app__navbar-logo {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    margin-left: 0px;
-    @media screen and (min-width: 468px) {
-        margin-left: 60px;
+    margin-left: 1rem;
+    @media screen and (min-width:768px) {
+        margin-left: 2rem;
+    }
+    @media screen and (min-width: 1024px) {
+        margin-left: 100px;
     }
     img {
         width: 120px;
@@ -86,6 +89,7 @@
 .hamburger-container {
     position: relative;
     z-index: 999999;
+    right: 1rem;
     @media screen and (min-width: 900px) {
         display: none;
     }

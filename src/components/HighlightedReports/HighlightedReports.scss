@@ -31,7 +31,7 @@
 }
 .app__highlighted-reports-container{
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     background-color: var(--lightgray-color);
     display: flex;
     flex-direction: column;
@@ -59,7 +59,7 @@
             grid-template-columns: 100%;
             background-color: var(--lightgray-color);
             padding-top: 30px;
-            @media screen and (min-width: 768px){
+            @media screen and (min-width: 1024px){
                 grid-template-columns: 50% 50%;
             }
             .app__highlighted-reports-slider-frame{
@@ -71,7 +71,7 @@
                 flex-direction: column;
                 justify-content: center;
                 padding-top: 40px;
-                @media screen and (min-width: 768px){
+                @media screen and (min-width: 1024px){
                     padding-top: 0;
                 }
                 p{
