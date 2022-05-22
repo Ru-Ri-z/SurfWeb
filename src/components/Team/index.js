@@ -21,9 +21,6 @@ const Team = () => {
           slidesPerView={width > 1024 ? 3 : 1}
           spaceBetween={30}
           loop={true}
-          //pagination={{
-          //  clickable: true,
-          //}}
           modules={[Pagination]}
           className="mySwiper"
         >
@@ -32,12 +29,18 @@ const Team = () => {
               <div
                 className="app__team-slider-card"
                 onMouseEnter={() => setActive(idx)}
-                // onMouseLeave={() => setActive(0)}
               >
                 <div className="app__team-slider-card-img">
                   <img src={item.image} alt={item.name} />
                 </div>
                 <div className="app__team-slider-card-data">
+                  <div className="app__team-slider-card-data-status-container">
+                    {item?.status && (
+                      <h3 className="app__team-slider-card-data-status">
+                        {item.status}
+                      </h3>
+                    )}
+                  </div>
                   <h3
                     className={`app__team-slider-card-data-title ${
                       active === idx && "change-slider-title"

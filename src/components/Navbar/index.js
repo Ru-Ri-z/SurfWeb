@@ -10,7 +10,9 @@ const Navbar = () => {
   return (
     <nav className={`app__navbar ${scroll > 30 && "scroll-navbar"}`}>
       <div className="app__navbar-logo">
+        <a href="#home">
         <Logo />
+        </a>
       </div>
       <ul className="app__navbar-links ">
         {NavbarList.map((item) => (

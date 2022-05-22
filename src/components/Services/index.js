@@ -1,6 +1,9 @@
 import React from "react";
-import servicesList from "./servicesList";
 import "./Services.scss";
+import Brain from "../../assets/svgs/services/Brain";
+import Table from "../../assets/svgs/services/Table";
+import Waves from "../../assets/svgs/services/Waves";
+import Surf from "../../assets/svgs/services/Surf";
 const Services = () => {
   return (
     <div className="app__services-container" id="servicios">
@@ -9,12 +12,30 @@ const Services = () => {
           <h2>A set of services designed for you</h2>
         </div>
         <div className="app__services-container-cards">
-          {servicesList.map((item, idx) => (
-            <div className="app__services-container-card" key={idx}>
-              <div>{item.img}</div>
-              <h3>{item.text}</h3>
+          <div className="app__services-container-card">
+            <div>
+              <Brain />
             </div>
-          ))}
+            <h3>Insights & regional intelligence</h3>
+          </div>
+          <div className="app__services-container-card">
+            <div>
+              <Table />
+            </div>
+            <h3>Coaching</h3>
+          </div>
+          <div className="app__services-container-card">
+            <div>
+              <Waves />
+            </div>
+            <h3>Localized advocacy support</h3>
+          </div>
+          <div className="app__services-container-card">
+            <div>
+              <Surf />
+            </div>
+            <h3>Positioning strategy</h3>
+          </div>
         </div>
       </div>
     </div>

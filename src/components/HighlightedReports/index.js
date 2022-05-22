@@ -28,6 +28,7 @@ const HighlightedReports = () => {
                     height="412"
                     allow="autoplay"
                     title={`frame${idx}`}
+                    loading="lazy"
                   ></iframe>
                 </div>
                 <div className="app__highlighted-reports-slider-paragraphs">

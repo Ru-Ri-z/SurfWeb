@@ -31,6 +31,7 @@ const OtherReports = () => {
                   height="412"
                   allow="autoplay"
                   title={`frame${idx}`}
+                  loading="lazy"
                 ></iframe>
               </div>
             </SwiperSlide>

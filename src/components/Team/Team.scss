@@ -34,6 +34,7 @@
     min-height: 90vh;
     background-color: var(--purple-color);
     padding-bottom: 40px;
+
     .app__team-title-container {
         width: 80%;
         margin: auto;
@@ -43,7 +44,8 @@
             font-size: 3rem;
             font-family: var(--font-base);
             color: var(--darkgreen-color);
-            @media screen and (min-width: 768px){
+
+            @media screen and (min-width: 768px) {
                 font-size: 4rem;
             }
         }
@@ -64,8 +66,30 @@
             }
 
             .app__team-slider-card-data {
-                margin-top: 40px;
+                margin-top: 20px;
                 margin-bottom: 40px;
+                display: flex;
+                flex-direction: column;
+
+                .app__team-slider-card-data-status-container {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    min-height: 40px;
+                    margin-bottom: 10px;
+
+                    .app__team-slider-card-data-status {
+                        background-color: #007ea7;
+                        background-image: linear-gradient(315deg, #007ea7 0%, #5d959b80 74%);
+
+                        border-radius: 5px;
+                        color: #fff;
+                        font-family: var(--font-base);
+                        font-weight: 600;
+                        padding: 5px 10px;
+
+                    }
+                }
 
                 .app__team-slider-card-data-title {
                     text-align: left;
@@ -74,7 +98,7 @@
                     font-weight: 600;
                 }
 
-                .change-slider-title{
+                .change-slider-title {
                     color: var(--darkgreen-color);
                 }
 
@@ -84,9 +108,11 @@
                     background-color: var(--white-color);
                     margin: 20px 0;
                 }
-                .change-slider-separator{
+
+                .change-slider-separator {
                     background-color: var(--darkgreen-color);
                 }
+
                 .app__team-slider-card-data-desc {
                     text-align: left;
                     color: var(--white-color);
@@ -96,7 +122,8 @@
                     visibility: hidden;
                     opacity: 0;
                 }
-                .show-slider-desc{
+
+                .show-slider-desc {
                     visibility: visible;
                     opacity: 1;
                     transition: all .2s ease-in-out;
@@ -106,12 +133,13 @@
     }
 }
 
-.arrow-container{
+.arrow-container {
     width: 100%;
     display: flex;
-    justify-content: flex-end;   
+    justify-content: flex-end;
     cursor: pointer;
-    img{
+
+    img {
         width: 150px;
         height: auto;
     }

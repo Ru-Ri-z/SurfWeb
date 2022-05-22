@@ -18,6 +18,7 @@ const SocialMedia = () => {
         frameBorder="0"
         allowFullScreen=""
         title="Publicación integrada"
+        loading="lazy"
       ></iframe>
     </div>
   );
