@@ -1,45 +1,48 @@
 import React from "react";
 import "./OtherReports.scss";
-import otherReportsList from "./otherReportsList";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
-import useWindowDimensions from "../../hooks/useWindowsDimensions";
-import SlideNextButton from "../HighlightedReports/SlideNextButton";
+import otherReports from "../../utils/constants/otherReports";
 const OtherReports = () => {
-  const { width } = useWindowDimensions();
   return (
-    <div className="app__others-reports-container">
-      <div className="app__others-reports-title">
-        <h2>Reportes anteriores</h2>
+    <div className="other-reports-section">
+      <div className="other-reports-title">
+        <h2>
+          Other Reports <span>and surveys</span>
+        </h2>
       </div>
-      <div className="app__slider-others-reports">
-        <Swiper
-          slidesPerView={width < 1024 ? 1 : 3}
-          spaceBetween={30}
-          loop={true}
-          modules={[Pagination]}
-          className="mySwiper"
-        >
-          {otherReportsList.map((item, idx) => (
-            <SwiperSlide key={idx}>
-              <div className="app__others-reports-slider-frame" key={idx}>
-                <iframe
-                  src={item}
-                  width="295"
-                  height="412"
-                  allow="autoplay"
-                  title={`frame${idx}`}
-                  loading="lazy"
-                ></iframe>
+      {otherReports.map((item, idx) => (
+        <div className="app__slider-container-reports" key={idx}>
+          <div className="app__highlighted-reports-slider">
+            <div className="app__highlighted-reports-slider-frame">
+              <iframe
+                src={item.url}
+                width={`${item.horizontal ? "412" : "295"}`}
+                height={`${item.horizontal ? "248" : "412"}`}
+                allow="autoplay"
+                title={`frame1`}
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div className="app__highlighted-reports-slider-paragraphs">
+              <p>{item.date}</p>
+              {item.subtitle && <h4>{item.subtitle}</h4>}
+              <h3>{item.title}</h3>
+              {item.paragraphs.map((paragraph, idx) => (
+                <p key={idx}>{paragraph}</p>
+              ))}
+              <div>
+                <a
+                  href={item.pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download={item.downloadName}
+                >
+                  Download
+                </a>
               </div>
-            </SwiperSlide>
-          ))}
-          <SlideNextButton />
-        </Swiper>
-      </div>
-      <div></div>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

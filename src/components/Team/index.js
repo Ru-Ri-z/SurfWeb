@@ -7,6 +7,7 @@ import { Pagination } from "swiper";
 import teamList from "./teamList";
 import SlideNextButton from "./SlideNextButton";
 import useWindowDimensions from "../../hooks/useWindowsDimensions";
+import SlidePrevButton from "./SlidePrevButton";
 
 const Team = () => {
   const [active, setActive] = useState(0);
@@ -14,11 +15,11 @@ const Team = () => {
   return (
     <div className="app__team-container">
       <div className="app__team-title-container">
-        <h2>Team</h2>
+        <h2>Our <span>Team</span></h2>
       </div>
       <div className="app__team-slider-container">
         <Swiper
-          slidesPerView={width > 1024 ? 3 : 1}
+          slidesPerView={width > 1024 ? 4 : 1}
           spaceBetween={30}
           loop={true}
           modules={[Pagination]}
@@ -34,25 +35,11 @@ const Team = () => {
                   <img src={item.image} alt={item.name} />
                 </div>
                 <div className="app__team-slider-card-data">
-                  <div className="app__team-slider-card-data-status-container">
-                    {item?.status && (
-                      <h3 className="app__team-slider-card-data-status">
-                        {item.status}
-                      </h3>
-                    )}
-                  </div>
                   <h3
-                    className={`app__team-slider-card-data-title ${
-                      active === idx && "change-slider-title"
-                    }`}
+                    className={`app__team-slider-card-data-title`}
                   >
                     {item.name}
                   </h3>
-                  <div
-                    className={`app__team-slider-separator ${
-                      active === idx && "change-slider-separator"
-                    }`}
-                  />
                   <p
                     className={`app__team-slider-card-data-desc ${
                       width < 1024 && "show-slider-desc"
@@ -64,7 +51,7 @@ const Team = () => {
               </div>
             </SwiperSlide>
           ))}
-
+          <SlidePrevButton/>
           <SlideNextButton />
         </Swiper>
       </div>

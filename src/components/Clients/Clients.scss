@@ -1,0 +1,35 @@
+.clients-container{
+    width: 100%;
+    background-color: var(--lightgray-color);
+    padding-bottom: 40px;
+    @media screen and (min-width: 1024px){
+        padding-bottom: unset;
+    }
+    h2 {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 3rem;
+        color: var(--blue-color);
+        font-family: var(--font-base);
+        text-align: left;
+        span {
+            display: block;
+            margin-top: -10px;
+            color: var(--purple-color);
+            @media screen and (min-width: 1024px){
+                margin-top: -20px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            font-size: 4rem;
+        }
+    }
+    .clients-container-image{
+        width: 80%;
+        margin: auto;
+        img{
+            width: 100%;
+        }
+    }
+}

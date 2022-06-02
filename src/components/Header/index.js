@@ -1,7 +1,8 @@
 import React from "react";
 import backgroundImage from "../../assets/coverpageimg.webp";
 import backgroundImageMobile from "../../assets/mobile.webp";
-import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { MdEmail } from "react-icons/md"
 import "./Header.scss";
 import useWindowsDimensions from "../../hooks/useWindowsDimensions";
 const Header = () => {
@@ -19,7 +20,7 @@ const Header = () => {
       {width < 1024 && <h2>Surf the Latam Digital Policy Scene</h2>}
       <div className="app__social-media-icons">
         <a href="#">
-          <FaFacebookF size={30} color="#fff" />
+          <MdEmail size={30} color="#fff" />
         </a>
         <a
           href="https://www.linkedin.com/company/smcplus/"

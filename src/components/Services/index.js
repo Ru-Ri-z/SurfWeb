@@ -9,7 +9,9 @@ const Services = () => {
     <div className="app__services-container" id="servicios">
       <div className="app__services-container-center">
         <div className="app__services-container-title">
-          <h2>A set of services designed for you</h2>
+          <h2>
+            A set of services <span>designed for you</span>
+          </h2>
         </div>
         <div className="app__services-container-cards">
           <div className="app__services-container-card">

@@ -1,5 +1,4 @@
 import React from "react";
-import imageContact from "../../assets/contactimage.webp";
 import "./Contact.scss";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
@@ -28,7 +27,6 @@ const Contact = () => {
   return (
     <div className="app__contact-container" id="contacto">
       <div className="app__contact-container-image">
-        <img src={imageContact} alt="contact" />
       </div>
       <div className="app__contact-container-data">
         <div className="app__contact-container-form">
