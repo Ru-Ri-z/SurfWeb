@@ -7,6 +7,7 @@ import useGetScrollPosition from "../../hooks/useGetScrollPosition";
 import { useLocation } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 const Navbar = () => {
+  const [display, setDisplay] = useState(false);
   const [isOpen, setOpen] = useState(false);
   const scroll = useGetScrollPosition();
   const location = useLocation();
@@ -22,11 +23,43 @@ const Navbar = () => {
         </Link>
       </div>
       <ul className="app__navbar-links ">
-        {NavbarList.map((item) => (
-          <li className="app__flex p-text app__li-nav" key={`link-${item}`}>
-            <Link to={`/#${item}`}>{item}</Link>
+        <li className="app__flex p-text app__li-nav">
+          <Link to={`/#home`}>Home</Link>
+        </li>
+        <li className="app__flex p-text app__li-nav">
+          <Link to={`/#about`}>About us</Link>
+        </li>
+        <li className="app__flex p-text app__li-nav">
+          <Link to={`/#services`}>Services</Link>
+        </li>
+        <div
+          onMouseEnter={() => setDisplay(true)}
+          onMouseLeave={() => setDisplay(false)}
+          className="app__li-report"
+        >
+          <li className="app__flex p-text app__li-nav">
+            <Link to={`/#reports`}>Reports</Link>
           </li>
-        ))}
+          {display && (
+            <div className={`app__li-report-dropdown`}>
+              <Link
+                to={`/#reports`}
+                style={{ color: `${scroll > 30 ? "#483c9a" : "#fff"}` }}
+              >
+                NEW
+              </Link>
+              <Link
+                to={`/other-reports`}
+                style={{ color: `${scroll > 30 ? "#483c9a" : "#fff"}` }}
+              >
+                OTHERS
+              </Link>
+            </div>
+          )}
+        </div>
+        <li className="app__flex p-text app__li-nav">
+          <Link to={`/#contact`}>Contact</Link>
+        </li>
       </ul>
       <div className="hamburger-container">
         <Hamburger

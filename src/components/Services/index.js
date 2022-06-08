@@ -14,7 +14,7 @@ const Services = () => {
     rootMargin: "-100px 0px",
   });
   return (
-    <div className="app__services-container" id="servicios">
+    <div className="app__services-container" id="services">
       <div className="app__services-container-center">
         <div className="app__services-container-title">
           <motion.h2

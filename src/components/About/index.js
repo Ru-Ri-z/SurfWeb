@@ -13,7 +13,7 @@ const About = () => {
     rootMargin: "-100px 0px",
   });
   return (
-    <div className="app__about-container" id="nosotros">
+    <div className="app__about-container" id="about" ref={titleRef}>
       <div className="app__about-container-data">
         <motion.h2
           ref={titleRef}

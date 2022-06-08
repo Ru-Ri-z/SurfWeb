@@ -21,7 +21,7 @@ const otherReports = [
     ],
   },
   {
-    date: "April 2022",
+    date: "March 2022",
     pdf: oran,
     downloadName: "orancrecedemanda.pdf",
     subtitle: "White Paper #1",
@@ -45,7 +45,7 @@ const otherReports = [
     ],
   },
   {
-    date: "April 2022",
+    date: "March 2022",
     pdf: despliegue,
     downloadName: "despliegue-infracestructura.pdf",
     subtitle: "EXPERT INSIGHT #1",

@@ -16,9 +16,14 @@ const AboutCeo = () => {
         <div>
           <img src={imageCeo} alt="ceo" />
           <motion.img
-            initial={{ top: "0%", right: "30%", opacity: 0 }}
-            whileInView={{ top: "70%", right: "30%", opacity: 1 }}
+            initial={{ top: "0%", right: "30%", opacity: 0, rotate: 0 }}
+            whileInView={{ top: "70%", right: "30%", opacity: 1, rotate: 360 }}
             transition={{
+              rotate: {
+                duration: 2,
+                repeat: Infinity,
+                repeatDelay: 3,
+              },
               default: { duration: 1.5, ease: "easeInOut" },
             }}
             src={cross}

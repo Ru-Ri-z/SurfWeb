@@ -6,26 +6,31 @@
     position: fixed;
     z-index: 2;
     padding-top: 10px;
-    
+
 }
-.scroll-navbar{
+
+.scroll-navbar {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     transition: all .3s ease-in-out;
     background: #008e937e;
 }
+
 .app__navbar-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 1rem;
+
     @media screen and (min-width:768px) {
         margin-left: 2rem;
     }
+
     @media screen and (min-width: 1024px) {
         margin-left: 100px;
     }
+
     img {
         width: 120px;
         height: auto;
@@ -45,12 +50,43 @@
 
     list-style: none;
 
+    .app__li-report {
+        position: relative;
+
+        .app__li-report-dropdown {
+            padding-top: 10px;
+            position: absolute;
+            top: 100%;
+            left: 1rem;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+
+            a {
+                color: var(--white-color);
+                text-decoration: none;
+                flex-direction: column;
+                font-family: var(--font-secondary);
+                text-transform: uppercase;
+
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+            }
+
+            .report-scroll {
+                a {
+                    color: var(--purple-color);
+                }
+            }
+        }
+    }
+
     .app__li-nav {
         margin: 0 1rem;
         cursor: pointer;
         flex-direction: column;
         position: relative;
-        overflow: hidden;
+        overflow-y: hidden;
 
         a {
             color: var(--white-color);
@@ -91,6 +127,7 @@
     position: relative;
     z-index: 999999;
     right: 1rem;
+
     @media screen and (min-width: 900px) {
         display: none;
     }

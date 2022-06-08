@@ -31,9 +31,9 @@
 .other-reports-searcher {
     display: flex;
     justify-content: center;
-
+    
     input {
-        width: 30%;
+        width: 80%;
         text-align: center;
         height: 40px;
         border: 1px solid #adadad99;
@@ -41,6 +41,12 @@
         font-family: var(--font-base);
         font-size: 1rem;
         outline: none;
+        @media screen and (min-width: 768px) {
+            width: 50%;
+        }
+        @media screen and (min-width: 1024px) {
+            width: 30%;
+        }
     }
 }
 

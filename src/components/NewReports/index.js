@@ -14,7 +14,7 @@ const NewReport = ({ item }) => {
     rootMargin: "-10px 0px",
   });
   return (
-    <div className="app__highlighted-reports-container" id="reportes">
+    <div className="app__highlighted-reports-container" id="reports">
       <img src={cross} alt="cross" />
       <div className="app__highlighted-reports-title">
         <motion.h2

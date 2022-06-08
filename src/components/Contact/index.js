@@ -31,7 +31,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="app__contact-container" id="contacto">
+    <div className="app__contact-container" id="contact">
       <div className="app__contact-container-image"></div>
       <div className="app__contact-container-data">
         <div className="app__contact-container-form">
