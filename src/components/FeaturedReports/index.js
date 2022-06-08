@@ -5,13 +5,31 @@ import pdfEN from "../../assets/pdfs/nuevasdinamicasEN.pdf";
 import pdfExPOR from "../../assets/pdfs/executivesumPor.pdf";
 import pdfExES from "../../assets/pdfs/executivesumES.pdf";
 import pdfExEn from "../../assets/pdfs/executivesumEN.pdf";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const FeaturedReport = ({ item }) => {
+  const [titleRef, titleInView] = useInView({
+    triggerOnce: true,
+    rootMargin: "-10px 0px",
+  });
+  const [paraRef, paraInView] = useInView({
+    triggerOnce: true,
+    rootMargin: "-10px 0px",
+  });
   return (
     <div className="app__featured-reports-container" id="reportes">
       <div className="app__highlighted-reports-title">
-        <h2>
+        <motion.h2
+          ref={titleRef}
+          animate={{
+            opacity: titleInView ? 1 : 0,
+            transform: titleInView ? "translate(0%)" : "translate(-10%)",
+          }}
+          transition={{ duration: 0.5 }}
+        >
           Featured <span>Report</span>
-        </h2>
+        </motion.h2>
       </div>
       <div className="app__slider-container-reports">
         <div className="app__highlighted-reports-slider">
@@ -25,7 +43,12 @@ const FeaturedReport = ({ item }) => {
               loading="lazy"
             ></iframe>
           </div>
-          <div className="app__highlighted-reports-slider-paragraphs">
+          <div
+            className="app__highlighted-reports-slider-paragraphs"
+            ref={paraRef}
+            animate={{ opacity: paraInView ? 1 : 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <h3>{item.title}</h3>
             {item.paragraphs.map((paragraph, idx) => (
               <p key={idx}>{paragraph}</p>
@@ -72,6 +95,9 @@ const FeaturedReport = ({ item }) => {
                 Executive Summary English
               </a>
             </div>
+            <Link to="/other-reports">
+              <button className="button-more-reports">More reports</button>
+            </Link>
           </div>
         </div>
       </div>

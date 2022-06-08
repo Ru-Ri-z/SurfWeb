@@ -5,7 +5,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    padding-top: 40px;
+    @media screen and (min-width: 1024px){
+        padding-top: unset;
+    }
     div {
         width: 95%;
         margin: auto;
@@ -23,7 +26,7 @@
         h2 {
             line-height: 60px;
             width: 100%;
-            margin: 20px auto;
+            margin: 40px auto;
             font-size: 3rem;
             color: var(--darkgreen-color);
             font-family: var(--font-base);

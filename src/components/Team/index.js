@@ -8,14 +8,28 @@ import teamList from "./teamList";
 import SlideNextButton from "./SlideNextButton";
 import useWindowDimensions from "../../hooks/useWindowsDimensions";
 import SlidePrevButton from "./SlidePrevButton";
-
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const Team = () => {
   const [active, setActive] = useState(0);
   const { width } = useWindowDimensions();
+  const [titleRef, titleInView] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px 0px",
+  });
   return (
     <div className="app__team-container">
       <div className="app__team-title-container">
-        <h2>Our <span>Team</span></h2>
+        <motion.h2
+          ref={titleRef}
+          animate={{
+            opacity: titleInView ? 1 : 0,
+            transform: titleInView ? "translate(0%)" : "translate(-10%)",
+          }}
+          transition={{ duration: 0.5 }}
+        >
+          Our <span>Team</span>
+        </motion.h2>
       </div>
       <div className="app__team-slider-container">
         <Swiper
@@ -35,9 +49,7 @@ const Team = () => {
                   <img src={item.image} alt={item.name} />
                 </div>
                 <div className="app__team-slider-card-data">
-                  <h3
-                    className={`app__team-slider-card-data-title`}
-                  >
+                  <h3 className={`app__team-slider-card-data-title`}>
                     {item.name}
                   </h3>
                   <p
@@ -51,7 +63,7 @@ const Team = () => {
               </div>
             </SwiperSlide>
           ))}
-          <SlidePrevButton/>
+          <SlidePrevButton />
           <SlideNextButton />
         </Swiper>
       </div>

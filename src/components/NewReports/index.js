@@ -2,14 +2,31 @@ import React from "react";
 import "./NewReports.scss";
 import pdf from "../../assets/pdfs/compraspublicas.pdf";
 import cross from "../../assets/cross-green.png";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const NewReport = ({ item }) => {
+  const [titleRef, titleInView] = useInView({
+    triggerOnce: true,
+    rootMargin: "-10px 0px",
+  });
+  const [paraRef, paraInView] = useInView({
+    triggerOnce: true,
+    rootMargin: "-10px 0px",
+  });
   return (
     <div className="app__highlighted-reports-container" id="reportes">
-      <img src={cross} alt="cross"/>
+      <img src={cross} alt="cross" />
       <div className="app__highlighted-reports-title">
-        <h2>
+        <motion.h2
+          ref={titleRef}
+          animate={{
+            opacity: titleInView ? 1 : 0,
+            transform: titleInView ? "translate(0%)" : "translate(-10%)",
+          }}
+          transition={{ duration: 0.5 }}
+        >
           New <span>Report</span>
-        </h2>
+        </motion.h2>
       </div>
       <div className="app__slider-container-reports">
         <div className="app__highlighted-reports-slider">
@@ -23,7 +40,12 @@ const NewReport = ({ item }) => {
               loading="lazy"
             ></iframe>
           </div>
-          <div className="app__highlighted-reports-slider-paragraphs">
+          <motion.div
+            className="app__highlighted-reports-slider-paragraphs"
+            ref={paraRef}
+            animate={{ opacity: paraInView ? 1 : 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <h3>{item.title}</h3>
             {item.paragraphs.map((paragraph, idx) => (
               <p key={idx}>{paragraph}</p>
@@ -38,7 +60,7 @@ const NewReport = ({ item }) => {
                 Download
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div></div>

@@ -2,7 +2,13 @@ import React from "react";
 import "./Contact.scss";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const Contact = () => {
+  const [titleRef, titleInView] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px 0px",
+  });
   const onSubmit = (e) => {
     e.preventDefault();
     emailjs
@@ -26,17 +32,25 @@ const Contact = () => {
 
   return (
     <div className="app__contact-container" id="contacto">
-      <div className="app__contact-container-image">
-      </div>
+      <div className="app__contact-container-image"></div>
       <div className="app__contact-container-data">
         <div className="app__contact-container-form">
-          <h2>Contact</h2>
+          <motion.h2
+            ref={titleRef}
+            animate={{
+              opacity: titleInView ? 1 : 0,
+              transform: titleInView ? "translate(0%)" : "translate(10%)",
+            }}
+            transition={{ duration: 0.5 }}
+          >
+            Contact
+          </motion.h2>
           <form className="app__contact-form" onSubmit={onSubmit}>
             <input placeholder="Nombre" name="user_name" />
             <input placeholder="Email" name="user_email" />
             <textarea placeholder="Consulta" name="message"></textarea>
             <div></div>
-            <input type="submit" value="Enviar" style={{ cursor:"pointer" }}/>
+            <input type="submit" value="Enviar" style={{ cursor: "pointer" }} />
           </form>
         </div>
       </div>

@@ -4,20 +4,27 @@ import NavbarList from "./NavbarList";
 import Logo from "../../assets/svgs/logo/Logo";
 import { Squash as Hamburger } from "hamburger-react";
 import useGetScrollPosition from "../../hooks/useGetScrollPosition";
+import { useLocation } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const scroll = useGetScrollPosition();
+  const location = useLocation();
   return (
-    <nav className={`app__navbar ${scroll > 30 && "scroll-navbar"}`}>
+    <nav
+      className={`app__navbar ${scroll > 30 && "scroll-navbar"} ${
+        location?.pathname === "/other-reports" && "scroll-navbar"
+      }`}
+    >
       <div className="app__navbar-logo">
-        <a href="#home">
-        <Logo />
-        </a>
+        <Link to="/#home">
+          <Logo />
+        </Link>
       </div>
       <ul className="app__navbar-links ">
         {NavbarList.map((item) => (
           <li className="app__flex p-text app__li-nav" key={`link-${item}`}>
-            <a href={`#${item}`}>{item}</a>
+            <Link to={`/#${item}`}>{item}</Link>
           </li>
         ))}
       </ul>
@@ -36,9 +43,9 @@ const Navbar = () => {
         <ul>
           {NavbarList.map((item) => (
             <li key={item}>
-              <a href={`#${item}`} onClick={() => setOpen(false)}>
+              <Link to={`/#${item}`} onClick={() => setOpen(false)}>
                 {item}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

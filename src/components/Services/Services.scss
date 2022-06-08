@@ -6,10 +6,12 @@
     justify-content: center;
     background-color: var(--purple-color);
     padding-bottom: 40px;
-    @media screen and (min-width: 768px){
+
+    @media screen and (min-width: 768px) {
         min-height: 100vh;
         padding-bottom: unset;
     }
+
     .app__services-container-center {
         width: 80%;
         display: flex;
@@ -35,7 +37,8 @@
                 display: block;
                 margin-top: -10px;
                 color: var(--white-color);
-                @media screen and (min-width: 1024px){
+
+                @media screen and (min-width: 1024px) {
                     margin-top: -20px;
                 }
             }
@@ -67,6 +70,7 @@
             align-items: center;
             color: var(--white-color);
             font-family: var(--font-base);
+            cursor: pointer;
 
             @media screen and (min-width: 768px) {
                 align-items: center;

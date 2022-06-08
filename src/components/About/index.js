@@ -4,19 +4,37 @@ import "../Button/Button.scss";
 import Monitor from "../../assets/svgs/about/Monitor";
 import Pencil from "../../assets/svgs/about/Pencil";
 import Eye from "../../assets/svgs/about/Eye";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 const About = () => {
+  const [titleRef, titleInView] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px 0px",
+  });
   return (
     <div className="app__about-container" id="nosotros">
       <div className="app__about-container-data">
-        <h2>
+        <motion.h2
+          ref={titleRef}
+          animate={{
+            opacity: titleInView ? 1 : 0,
+            transform: titleInView ? "translate(0%)" : "translate(-10%)",
+          }}
+          transition={{ duration: 0.5 }}
+        >
           About <span>us</span>
-        </h2>
-        <p>
+        </motion.h2>
+        <motion.p
+          ref={titleRef}
+          animate={{ opacity: titleInView ? 1 : 0 }}
+          transition={{ duration: 0.5 }}
+        >
           SmC+ is a digital policy strategy firm focused and based in Latin
           America. SmC+ is today serving global technology companies and
           international organizations to understand and act in the complex
           regional policy scene.{" "}
-        </p>
+        </motion.p>
         <a
           className="button"
           href="https://twitter.com/search?q=%23SurfTheLatamDigitalPolicyScene&src=typed_query"
@@ -27,7 +45,11 @@ const About = () => {
         </a>
       </div>
       <div className="app__about-container-description">
-        <div>
+        <motion.div
+          ref={titleRef}
+          animate={{ opacity: titleInView ? 1 : 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <div>
             <Monitor />
             <p>
@@ -49,7 +71,7 @@ const About = () => {
               associations and multilateral organizations
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

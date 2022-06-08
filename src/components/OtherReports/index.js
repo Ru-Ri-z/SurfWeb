@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./OtherReports.scss";
 import otherReports from "../../utils/constants/otherReports";
 const OtherReports = () => {
+  const [filterReports, setFilterReports] = useState(otherReports);
+  const [input, setInput] = useState("");
+
+  const handleChange = (e) => {
+    setInput(e.target.value.toLowerCase());
+  };
+
+  useEffect(() => {
+    if (!input) return setFilterReports(otherReports);
+    const filterArr = otherReports.filter((item) =>
+      item.date.toLowerCase().includes(input)
+    );
+    setFilterReports(filterArr);
+  }, [input]);
+
   return (
     <div className="other-reports-section">
       <div className="other-reports-title">
@@ -9,7 +24,20 @@ const OtherReports = () => {
           Other Reports <span>and surveys</span>
         </h2>
       </div>
-      {otherReports.map((item, idx) => (
+      <div className="other-reports-searcher">
+        <input
+          type="text"
+          placeholder="Buscar por fechas"
+          value={input}
+          onChange={handleChange}
+        />
+      </div>
+      {filterReports?.length === 0 && (
+        <h3 className="other-reports-no-result">
+          No se encontraron resultados
+        </h3>
+      )}
+      {filterReports.map((item, idx) => (
         <div className="app__slider-container-reports" key={idx}>
           <div className="app__highlighted-reports-slider">
             <div className="app__highlighted-reports-slider-frame">

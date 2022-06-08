@@ -4,6 +4,7 @@ import service3 from "../../assets/SERVICIOS-03.webp";
 import service4 from "../../assets/SERVICIOS-04.webp";
 const servicesExtended = [
   {
+    id:"insights-regional-intelligence",
     title: "Insights & regional intelligence",
     backImage: service1,
     descriptions: [
@@ -26,6 +27,7 @@ const servicesExtended = [
     ],
   },
   {
+    id:"positioning-strategy",
     title: "Regional Positioning",
     backImage: service2,
     descriptions: [
@@ -48,6 +50,7 @@ const servicesExtended = [
     ],
   },
   {
+    id:"coaching",
     title: "Coaching",
     backImage: service3,
     descriptions: [
@@ -66,6 +69,7 @@ const servicesExtended = [
     ],
   },
   {
+    id:"localized-advocacy-support",
     title: "Localized advocacy support",
     backImage: service4,
     descriptions: [
