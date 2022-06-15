@@ -26,7 +26,7 @@ const Team = () => {
             opacity: titleInView ? 1 : 0,
             transform: titleInView ? "translate(0%)" : "translate(-10%)",
           }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1 }}
         >
           Our <span>Team</span>
         </motion.h2>

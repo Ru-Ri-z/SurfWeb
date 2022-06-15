@@ -48,12 +48,14 @@ const Navbar = () => {
               >
                 NEW
               </Link>
-              <Link
-                to={`/other-reports`}
+              <a
+                href="/other-reports"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: `${scroll > 30 ? "#483c9a" : "#fff"}` }}
               >
                 OTHERS
-              </Link>
+              </a>
             </div>
           )}
         </div>

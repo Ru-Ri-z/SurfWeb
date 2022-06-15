@@ -1,8 +1,22 @@
-.recent-publication-container{
+.recent-publication-container {
     width: 100%;
-    background-image: url("../../assets/pHqPXl.webp");
-    background-attachment: fixed;
-    img{
+    background-color: var(--purple-color);
+    position: relative;
+    img {
         width: 100%;
+    }
+
+    .button {
+        position: absolute;
+        border: 2px solid var(--darkgreen-color);
+        background-color: transparent;
+        border-radius: 30px;
+        padding: 10px 20px;
+        color: var(--darkgreen-color);
+        font-size: 1rem;
+        font-family: var(--font-base);
+        left: 20%;
+        top: 85%;
+        z-index: 9999;
     }
 }

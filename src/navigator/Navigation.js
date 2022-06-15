@@ -16,7 +16,6 @@ const Navigation = () => {
     <>
       <BrowserRouter>
         <Wrapper>
-          <Banner />
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} index />

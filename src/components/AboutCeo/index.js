@@ -17,7 +17,8 @@ const AboutCeo = () => {
           <img src={imageCeo} alt="ceo" />
           <motion.img
             initial={{ top: "0%", right: "30%", opacity: 0, rotate: 0 }}
-            whileInView={{ top: "70%", right: "30%", opacity: 1, rotate: 360 }}
+            whileInView={{ top: "70%", right: "30%", opacity: 1 }}
+            animate={{ rotate: 360 }}
             transition={{
               rotate: {
                 duration: 2,
@@ -39,14 +40,14 @@ const AboutCeo = () => {
             opacity: titleInView ? 1 : 0,
             transform: titleInView ? "translate(0%)" : "translate(10%)",
           }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1 }}
         >
           About <span>Sebastian</span>
         </motion.h2>
         <motion.p
           ref={titleRef}
           animate={{ opacity: titleInView ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1.3 }}
         >
           Sebastian Cabello is the Founder and CEO of SmC+. He is an
           accomplished expert with vast experience driving collective action,
@@ -56,7 +57,7 @@ const AboutCeo = () => {
         <motion.p
           ref={titleRef}
           animate={{ opacity: titleInView ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1.3 }}
         >
           SmC+ is a newly established firm providing policy consulting services
           to the Inter-American Bank (IDB), the Latin American Internet
@@ -66,7 +67,7 @@ const AboutCeo = () => {
         <motion.p
           ref={titleRef}
           animate={{ opacity: titleInView ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1.3 }}
         >
           Between 2010 and end-2018, he was Head of Latin America at the GSMA,
           the global association of the mobile industry, and led the
@@ -78,7 +79,7 @@ const AboutCeo = () => {
         <motion.p
           ref={titleRef}
           animate={{ opacity: titleInView ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1.3 }}
         >
           He holds a “Licenciado” degree in Economics and a Master in
           International Affairs from UC San Diego and has been a Fulbright

@@ -11,11 +11,11 @@ import { useInView } from "react-intersection-observer";
 const FeaturedReport = ({ item }) => {
   const [titleRef, titleInView] = useInView({
     triggerOnce: true,
-    rootMargin: "-10px 0px",
+    rootMargin: "-100px 0px",
   });
   const [paraRef, paraInView] = useInView({
     triggerOnce: true,
-    rootMargin: "-10px 0px",
+    rootMargin: "-100px 0px",
   });
   return (
     <div className="app__featured-reports-container" id="reportes">
@@ -26,7 +26,7 @@ const FeaturedReport = ({ item }) => {
             opacity: titleInView ? 1 : 0,
             transform: titleInView ? "translate(0%)" : "translate(-10%)",
           }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1 }}
         >
           Featured <span>Report</span>
         </motion.h2>
@@ -43,11 +43,11 @@ const FeaturedReport = ({ item }) => {
               loading="lazy"
             ></iframe>
           </div>
-          <div
+          <motion.div
             className="app__highlighted-reports-slider-paragraphs"
-            ref={paraRef}
-            animate={{ opacity: paraInView ? 1 : 0 }}
-            transition={{ duration: 0.5 }}
+            ref={titleRef}
+            animate={{ opacity: titleInView ? 1 : 0 }}
+            transition={{ duration: 0.5, delay: 1.3 }}
           >
             <h3>{item.title}</h3>
             {item.paragraphs.map((paragraph, idx) => (
@@ -95,10 +95,29 @@ const FeaturedReport = ({ item }) => {
                 Executive Summary English
               </a>
             </div>
-            <Link to="/other-reports">
-              <button className="button-more-reports">More reports</button>
-            </Link>
-          </div>
+            <div >
+              <a
+                href="/other-reports"
+                target="_blank"
+                rel="nooponer noreferrer"
+                style={{
+                  width:"200px",
+                  display:"inline",
+                  border: "2px solid white",
+                  color: "white",
+                  backgroundColor: "transparent",
+                  padding: "10px 20px",
+                  borderRadius: "30px",
+                  fontSize: "1.2rem",
+                  textDecoration: "none",
+                  textAlign: "center",
+                  cursor: "pointer",
+                }}
+              >
+                More reports
+              </a>
+            </div>
+          </motion.div>
         </div>
       </div>
       <div></div>

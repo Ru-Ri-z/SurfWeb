@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./OtherReports.scss";
 import otherReports from "../../utils/constants/otherReports";
+import { FiSearch } from "react-icons/fi";
 const OtherReports = () => {
   const [filterReports, setFilterReports] = useState(otherReports);
   const [input, setInput] = useState("");
@@ -9,13 +10,13 @@ const OtherReports = () => {
     setInput(e.target.value.toLowerCase());
   };
 
-  useEffect(() => {
+  const handleSearch = () => {
     if (!input) return setFilterReports(otherReports);
     const filterArr = otherReports.filter((item) =>
       item.date.toLowerCase().includes(input)
     );
     setFilterReports(filterArr);
-  }, [input]);
+  };
 
   return (
     <div className="other-reports-section">
@@ -30,6 +31,12 @@ const OtherReports = () => {
           placeholder="Buscar por fechas"
           value={input}
           onChange={handleChange}
+        />
+        <FiSearch
+          size={40}
+          color="adadad"
+          style={{ paddingLeft: "10px", cursor: "pointer" }}
+          onClick={handleSearch}
         />
       </div>
       {filterReports?.length === 0 && (

@@ -12,6 +12,9 @@ import { Pagination } from "swiper";
 import video2 from "../../assets/video1.mov";
 import SlidePrevButton from "./SlidePrevButton";
 import SlideNextButton from "./SlideNextButton";
+import SocialOne from "../../assets/svgs/social/SocialOne";
+import SocialTwo from "../../assets/svgs/social/SocialTwo";
+import SocialThree from "../../assets/svgs/social/SocialThree";
 const HeaderCarousel = () => {
   const { width } = useWindowsDimensions();
   return (
@@ -35,21 +38,21 @@ const HeaderCarousel = () => {
           {width < 1024 && <h2>Surf the Latam Digital Policy Scene</h2>}
           <div className="app__social-media-icons">
             <a href="#">
-              <MdEmail size={30} color="#fff" />
+              <SocialOne/>
             </a>
             <a
               href="https://www.linkedin.com/company/smcplus/"
               rel="nooponer noreferrer"
               target="_blank"
             >
-              <FaLinkedinIn size={30} color="#fff" />
+              <SocialTwo/>
             </a>
             <a
               href="https://twitter.com/SMCplus"
               rel="nooponer noreferrer"
               target="_blank"
             >
-              <FaTwitter size={30} color="#fff" />
+              <SocialThree/>
             </a>
           </div>
         </SwiperSlide>

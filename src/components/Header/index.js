@@ -2,9 +2,12 @@ import React from "react";
 import backgroundImage from "../../assets/coverpageimg.webp";
 import backgroundImageMobile from "../../assets/mobile.webp";
 import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import { MdEmail } from "react-icons/md"
+import { MdEmail } from "react-icons/md";
 import "./Header.scss";
 import useWindowsDimensions from "../../hooks/useWindowsDimensions";
+import SocialOne from "../../assets/svgs/social/SocialOne";
+import SocialTwo from "../../assets/svgs/social/SocialTwo";
+import SocialThree from "../../assets/svgs/social/SocialThree";
 const Header = () => {
   const { width } = useWindowsDimensions();
   return (
@@ -20,21 +23,21 @@ const Header = () => {
       {width < 1024 && <h2>Surf the Latam Digital Policy Scene</h2>}
       <div className="app__social-media-icons">
         <a href="#">
-          <MdEmail size={30} color="#fff" />
+          <SocialOne />
         </a>
         <a
           href="https://www.linkedin.com/company/smcplus/"
           rel="nooponer noreferrer"
           target="_blank"
         >
-          <FaLinkedinIn size={30} color="#fff" />
+          <SocialTwo />
         </a>
         <a
           href="https://twitter.com/SMCplus"
           rel="nooponer noreferrer"
           target="_blank"
         >
-          <FaTwitter size={30} color="#fff" />
+          <SocialThree />
         </a>
       </div>
     </div>

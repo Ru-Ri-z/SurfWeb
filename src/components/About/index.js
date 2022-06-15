@@ -21,34 +21,37 @@ const About = () => {
             opacity: titleInView ? 1 : 0,
             transform: titleInView ? "translate(0%)" : "translate(-10%)",
           }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1 }}
         >
           About <span>us</span>
         </motion.h2>
         <motion.p
           ref={titleRef}
           animate={{ opacity: titleInView ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1.3 }}
         >
           SmC+ is a digital policy strategy firm focused and based in Latin
           America. SmC+ is today serving global technology companies and
           international organizations to understand and act in the complex
           regional policy scene.{" "}
         </motion.p>
-        <a
+        <motion.a
           className="button"
+          ref={titleRef}
+          animate={{ opacity: titleInView ? 1 : 0 }}
+          transition={{ duration: 0.5, delay: 1.3 }}
           href="https://twitter.com/search?q=%23SurfTheLatamDigitalPolicyScene&src=typed_query"
           rel="nooponer noreferrer"
           target="_blank"
         >
           Follow #SurfTheLatamDigitalPolicyScene
-        </a>
+        </motion.a>
       </div>
       <div className="app__about-container-description">
         <motion.div
           ref={titleRef}
           animate={{ opacity: titleInView ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1.3 }}
         >
           <div>
             <Monitor />

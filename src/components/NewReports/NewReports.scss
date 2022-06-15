@@ -1,6 +1,6 @@
 .app__highlighted-reports-container {
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     background-color: var(--lightgray-color);
     display: flex;
     flex-direction: column;
@@ -15,8 +15,8 @@
             position: absolute;
             top: 5rem;
             right: 5rem;
-            width: 100px;
-            height: 100px;
+            width: 130px;
+            height: 130px;
         }
     }
 
@@ -81,7 +81,7 @@
                     color: var(--purple-color);
                     text-align: left;
                     font-family: var(--font-base);
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                     font-weight: 600;
                     padding-bottom: 20px;
                 }
@@ -91,7 +91,7 @@
                     text-align: left;
                     font-family: var(--font-base);
                     margin-bottom: 15px;
-                    font-size: 1rem;
+                    font-size: .8rem;
                     color: var(--gray-color);
                 }
 

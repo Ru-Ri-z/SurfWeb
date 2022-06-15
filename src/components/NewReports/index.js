@@ -15,7 +15,19 @@ const NewReport = ({ item }) => {
   });
   return (
     <div className="app__highlighted-reports-container" id="reports">
-      <img src={cross} alt="cross" />
+      <motion.img
+        src={cross}
+        alt="cross"
+        initial={{ rotate: 0 }}
+        animate={{ rotate: 360 }}
+        transition={{
+          rotate: {
+            duration: 30,
+            repeat: Infinity,
+            repeatDelay: 0,
+          },
+        }}
+      />
       <div className="app__highlighted-reports-title">
         <motion.h2
           ref={titleRef}
@@ -23,7 +35,7 @@ const NewReport = ({ item }) => {
             opacity: titleInView ? 1 : 0,
             transform: titleInView ? "translate(0%)" : "translate(-10%)",
           }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1 }}
         >
           New <span>Report</span>
         </motion.h2>
@@ -44,7 +56,7 @@ const NewReport = ({ item }) => {
             className="app__highlighted-reports-slider-paragraphs"
             ref={paraRef}
             animate={{ opacity: paraInView ? 1 : 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 1.3 }}
           >
             <h3>{item.title}</h3>
             {item.paragraphs.map((paragraph, idx) => (
