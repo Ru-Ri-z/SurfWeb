@@ -34,7 +34,8 @@
     min-height: 90vh;
     background-color: var(--lightgray-color);
     padding-bottom: 40px;
-    
+    position: relative;
+
     .app__team-title-container {
         width: 80%;
         margin: auto;
@@ -51,7 +52,8 @@
                 display: block;
                 margin-top: -10px;
                 color: var(--purple-color);
-                @media screen and (min-width: 1024px){
+
+                @media screen and (min-width: 1024px) {
                     margin-top: -20px;
                 }
             }
@@ -63,11 +65,17 @@
     }
 
     .app__team-slider-container {
-        width: 90%;
+        width: 98%;
         margin: auto;
-        position: relative;
+        display: grid;
+
         .app__team-slider-card {
             background-color: var(--lightgray-color);
+            height: 100%;
+            box-shadow: 2px 2px 11px -4px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 2px 2px 11px -4px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 2px 2px 11px -4px rgba(0, 0, 0, 0.75);
+            border-radius: 10px;
 
             .app__team-slider-card-img {
                 width: 70%;
@@ -77,7 +85,7 @@
 
             .app__team-slider-card-data {
                 margin-top: 20px;
-                margin-bottom: 40px;
+                margin-bottom: 20px;
                 display: flex;
                 flex-direction: column;
 
@@ -99,16 +107,19 @@
                     padding-bottom: 20px;
                 }
 
-               
+
 
                 .app__team-slider-card-data-desc {
                     text-align: center;
                     color: var(--gray-color);
                     font-family: var(--font-base);
                     font-size: .8rem;
-                    width: 100%;
+                    width: 92%;
+                    margin: auto;
                     visibility: hidden;
                     opacity: 0;
+                    text-align: justify;
+                    word-spacing: -1px;
                 }
 
                 .show-slider-desc {
@@ -119,20 +130,20 @@
             }
         }
     }
-}
 
-.arrow-container-right {
-    position: absolute;
-    top: 20%;
-    right: 0;
-    z-index: 9999;
-    cursor: pointer;
-}
+    .arrow-container-right {
+        position: absolute;
+        top: 20%;
+        right: 1rem;
+        z-index: 9999;
+        cursor: pointer;
+    }
 
-.arrow-container-left {
-    position: absolute;
-    top: 20%;
-    left: 0;
-    z-index: 9999;
-    cursor: pointer;
+    .arrow-container-left {
+        position: absolute;
+        top: 20%;
+        left: 1rem;
+        z-index: 9999;
+        cursor: pointer;
+    }
 }

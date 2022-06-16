@@ -11,7 +11,6 @@ import SlidePrevButton from "./SlidePrevButton";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 const Team = () => {
-  const [active, setActive] = useState(0);
   const { width } = useWindowDimensions();
   const [titleRef, titleInView] = useInView({
     triggerOnce: true,
@@ -31,20 +30,20 @@ const Team = () => {
           Our <span>Team</span>
         </motion.h2>
       </div>
+
       <div className="app__team-slider-container">
         <Swiper
           slidesPerView={width > 1024 ? 4 : 1}
-          spaceBetween={30}
+          spaceBetween={0}
           loop={true}
           modules={[Pagination]}
-          className="mySwiper"
         >
           {teamList.map((item, idx) => (
-            <SwiperSlide key={idx}>
-              <div
-                className="app__team-slider-card"
-                onMouseEnter={() => setActive(idx)}
-              >
+            <SwiperSlide
+              key={idx}
+              style={{ padding: "10px", backgroundColor: "transparent" }}
+            >
+              <div className="app__team-slider-card">
                 <div className="app__team-slider-card-img">
                   <img src={item.image} alt={item.name} />
                 </div>
@@ -53,9 +52,7 @@ const Team = () => {
                     {item.name}
                   </h3>
                   <p
-                    className={`app__team-slider-card-data-desc ${
-                      width < 1024 && "show-slider-desc"
-                    } ${active === idx && "show-slider-desc"}`}
+                    className={`app__team-slider-card-data-desc show-slider-desc`}
                   >
                     {item.description}
                   </p>

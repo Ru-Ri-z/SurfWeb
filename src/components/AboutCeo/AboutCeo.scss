@@ -1,12 +1,126 @@
-.app__about-containerCeo {
-    width: 100%;
-    min-height: 70vh;
-    background-color: var(--lightgray-color);
-    background-image: url("../../assets/waveback.jpeg");
+.about-section{
+    background-image: url("../../assets/wavebackground.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+}
+.app__about-container {
+    width: 100%;
+    min-height: 50vh;
+    padding-top: 40px;
+
+    @media screen and (min-width: 768px) {
+        min-height: 50vh;
+    }
+
+    @media screen and (min-width: 1024px) {
+        min-height: 70vh;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding-top: unset;
+    }
+
+    .app__about-container-data {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+            width: 60%;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 60%;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: var(--blue-color);
+            font-family: var(--font-base);
+            margin: 0px;
+            padding-bottom: 20px;
+
+            span {
+                display: block;
+                margin-top: -10px;
+                color: var(--purple-color);
+
+                @media screen and (min-width: 768px) {
+                    margin-top: -30px;
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: 4rem;
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: var(--gray-color);
+            font-family: var(--font-base);
+            margin-bottom: 40px;
+        }
+    }
+
+    .app__about-container-description {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 40px;
+
+        @media screen and (min-width: 1024px) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: unset;
+        }
+
+        div {
+            @media screen and (min-width: 1024px) {
+                padding-left: 20px;
+            }
+
+            div {
+                display: flex;
+                align-items: flex-start;
+                width: 80%;
+                margin: auto;
+
+                @media screen and (min-width: 1024px) {
+                    width: unset;
+                    margin: unset;
+                }
+
+                p {
+                    font-family: var(--font-base);
+                    padding-left: 20px;
+                    width: 90%;
+                    font-size: 1.1rem;
+                    color: var(--blue-color);
+                    font-weight: 600;
+                    margin-bottom: 40px;
+
+                    @media screen and (min-width: 1024px) {
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.app__about-containerCeo {
+    width: 100%;
+    min-height: 70vh;
+    
+
     @media screen and (min-width: 768px) {
         min-height: 50vh;
     }
@@ -38,11 +152,13 @@
             font-family: var(--font-base);
             margin-bottom: 30px;
             text-align: right;
+
             span {
                 display: block;
                 margin-top: -10px;
                 color: var(--purple-color);
-                @media screen and (min-width: 768px){
+
+                @media screen and (min-width: 768px) {
                     margin-top: -20px;
                 }
             }
@@ -58,10 +174,11 @@
             font-family: var(--font-base);
             margin-bottom: 20px;
             text-align: right;
+            background-color: var(--lightgray-color);
         }
     }
 
-    .app__about-container-imageCeo   {
+    .app__about-container-imageCeo {
         @media screen and (min-width: 1024px) {
             width: 100%;
             display: flex;
@@ -69,17 +186,20 @@
             align-items: center;
             flex-direction: column;
         }
-        div{
+
+        div {
             width: 80%;
             height: auto;
             margin: auto;
             position: relative;
-            .cross{
+
+            .cross {
                 position: absolute;
                 width: 80px;
                 height: 80px;
             }
-            img{
+
+            img {
                 width: 100%;
                 height: auto;
             }

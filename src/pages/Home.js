@@ -1,5 +1,4 @@
 import React from "react";
-import About from "../components/About";
 import AboutCeo from "../components/AboutCeo";
 import Banner from "../components/Banner";
 import Clients from "../components/Clients";
@@ -25,7 +24,6 @@ const Home = () => {
       {width < 1024 && <Video />}
       {width > 1024 && <HeaderCarousel />}
       <Banner />
-      <About />
       <AboutCeo />
       <Team />
       <ServicesAnimation />
