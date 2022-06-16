@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Team.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import "./Banner.scss";
 import LogoBanner from "../../assets/svgs/logo/LogoBanner";
 import TableLoader from "../../assets/svgs/logo/TableLoader";
+import image1 from "../../assets/SMC+LOGO-02.png";
 const Banner = () => {
   return (
     <motion.div
@@ -14,7 +15,11 @@ const Banner = () => {
       }}
     >
       <div>
-        <LogoBanner />
+        <img
+          src={image1}
+          alt="logo"
+          style={{ width: "350px", height: "auto" }}
+        />
         <motion.div
           style={{ marginTop: "30px" }}
           animate={{ opacity: [1, 0] }}
