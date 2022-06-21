@@ -1,9 +1,13 @@
-.about-section{
-    background-image: url("../../assets/wavebackground.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.about-section {
+    background-color: var(--lightgray-color);
+    @media screen and (min-width: 1024px) {
+        background-image: url("../../assets/wavebackground.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
+
 .app__about-container {
     width: 100%;
     min-height: 50vh;
@@ -62,6 +66,7 @@
             color: var(--gray-color);
             font-family: var(--font-base);
             margin-bottom: 40px;
+
         }
     }
 
@@ -119,7 +124,7 @@
 .app__about-containerCeo {
     width: 100%;
     min-height: 70vh;
-    
+
 
     @media screen and (min-width: 768px) {
         min-height: 50vh;
@@ -174,7 +179,10 @@
             font-family: var(--font-base);
             margin-bottom: 20px;
             text-align: right;
-            background-color: var(--lightgray-color);
+
+            @media screen and (min-width: 1024px) {
+                background-color: var(--lightgray-color);
+            }
         }
     }
 

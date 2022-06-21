@@ -28,11 +28,13 @@ const SocialMedia = () => {
       </div>
       <div className="app__social-media-container">
         <div>
-          <FaTwitter
-            size={60}
-            color="#483c9a"
-            style={{ marginBottom: "20px" }}
-          />
+          {width > 1024 && (
+            <FaTwitter
+              size={60}
+              color="#483c9a"
+              style={{ marginBottom: "20px" }}
+            />
+          )}
           <TwitterTimelineEmbed
             sourceType="SMCplus"
             screenName="SMCplus"
@@ -40,11 +42,13 @@ const SocialMedia = () => {
           />
         </div>
         <div>
-          <FaLinkedinIn
-            size={60}
-            color="#483c9a"
-            style={{ marginBottom: "20px" }}
-          />
+          {width > 1024 && (
+            <FaLinkedinIn
+              size={60}
+              color="#483c9a"
+              style={{ marginBottom: "20px" }}
+            />
+          )}
           <iframe
             src="https://www.linkedin.com/embed/feed/update/urn:li:share:6923367792129765376"
             height="650"

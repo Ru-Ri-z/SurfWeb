@@ -92,6 +92,7 @@ const AboutCeo = () => {
                   duration: 2,
                   repeat: Infinity,
                   repeatDelay: 3,
+                  ease:"linear"
                 },
                 default: { duration: 1.5, ease: "easeInOut" },
               }}

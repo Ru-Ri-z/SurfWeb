@@ -2,8 +2,22 @@
     width: 100%;
     background-color: var(--purple-color);
     position: relative;
-    img {
+
+    .image-recent-pub {
         width: 100%;
+    }
+
+    .image-recent-pub-cross {
+        display: none;
+
+        @media screen and (min-width: 1024px) {
+            display: block;
+            position: absolute;
+            bottom: 3rem;
+            left: 25%;
+            width: 160px;
+            height: 160px;
+        }
     }
 
     .button {
@@ -15,7 +29,7 @@
         color: var(--darkgreen-color);
         font-size: 1rem;
         font-family: var(--font-base);
-        left: 20%;
+        left: 10%;
         top: 85%;
         z-index: 9999;
     }
