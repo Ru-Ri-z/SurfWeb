@@ -2,7 +2,10 @@
     width: 100%;
     background-color: var(--purple-color);
     position: relative;
-
+    background-image: url("../../assets//recent-publications1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     .image-recent-pub {
         width: 100%;
     }

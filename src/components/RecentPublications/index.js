@@ -6,7 +6,12 @@ import { motion } from "framer-motion";
 const RecentPublications = () => {
   return (
     <div className="recent-publication-container">
-      <img src={imageRecent} alt="recent-publication" loading="lazy" className="image-recent-pub"/>
+      <img
+        src={imageRecent}
+        alt="recent-publication"
+        loading="lazy"
+        className="image-recent-pub"
+      />
       <motion.img
         src={cross}
         className="image-recent-pub-cross"
@@ -15,10 +20,10 @@ const RecentPublications = () => {
         animate={{ rotate: 360 }}
         transition={{
           rotate: {
-            duration: 30,
+            duration: 20,
             repeat: Infinity,
             repeatDelay: 0,
-            ease:"linear"
+            ease: "linear",
           },
         }}
       />

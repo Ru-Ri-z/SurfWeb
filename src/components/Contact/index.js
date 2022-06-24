@@ -7,7 +7,7 @@ import { useInView } from "react-intersection-observer";
 const Contact = () => {
   const [titleRef, titleInView] = useInView({
     triggerOnce: true,
-    rootMargin: "-100px 0px",
+    rootMargin: "-50px 0px",
   });
   const onSubmit = (e) => {
     e.preventDefault();
@@ -41,7 +41,7 @@ const Contact = () => {
               opacity: titleInView ? 1 : 0,
               transform: titleInView ? "translate(0%)" : "translate(10%)",
             }}
-            transition={{ duration: 0.5, delay:1.3 }}
+            transition={{ duration: 0.5, delay:0.4 }}
           >
             Contact
           </motion.h2>

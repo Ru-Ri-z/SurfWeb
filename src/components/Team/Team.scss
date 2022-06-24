@@ -35,7 +35,9 @@
     background-color: var(--lightgray-color);
     padding-bottom: 40px;
     position: relative;
-
+    @media screen and (min-width: 1024px){
+        padding-top: 80px;
+    }
     .app__team-title-container {
         width: 85%;
         margin: auto;
@@ -72,9 +74,6 @@
         .app__team-slider-card {
             background-color: var(--lightgray-color);
             height: 100%;
-            box-shadow: 2px 2px 11px -4px rgba(0, 0, 0, 0.75);
-            -webkit-box-shadow: 2px 2px 11px -4px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 2px 2px 11px -4px rgba(0, 0, 0, 0.75);
             border-radius: 10px;
 
             .app__team-slider-card-img {
@@ -118,7 +117,7 @@
                     margin: auto;
                     visibility: hidden;
                     opacity: 0;
-                    text-align: justify;
+                    text-align: center;
                     word-spacing: -1px;
                 }
 

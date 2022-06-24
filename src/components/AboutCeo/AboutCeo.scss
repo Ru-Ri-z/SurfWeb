@@ -1,10 +1,13 @@
 .about-section {
     background-color: var(--lightgray-color);
+    position: relative;
+
     @media screen and (min-width: 1024px) {
-        background-image: url("../../assets/wavebackground.jpeg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        //background-image: url("../../assets/wavebackground.jpeg");
+        //background-size: cover;
+        //background-position: center;
+        //background-repeat: no-repeat;
+        //background-attachment: fixed;
     }
 }
 
@@ -12,6 +15,8 @@
     width: 100%;
     min-height: 50vh;
     padding-top: 40px;
+    position: relative;
+    z-index: 2;
 
     @media screen and (min-width: 768px) {
         min-height: 50vh;
@@ -46,6 +51,10 @@
             margin: 0px;
             padding-bottom: 20px;
 
+            @media screen and (min-width: 1700px) {
+                font-size: 4rem;
+            }
+
             span {
                 display: block;
                 margin-top: -10px;
@@ -58,6 +67,7 @@
 
             @media screen and (min-width: 1024px) {
                 font-size: 4rem;
+
             }
         }
 
@@ -67,6 +77,13 @@
             font-family: var(--font-base);
             margin-bottom: 40px;
 
+            @media screen and (min-width: 1024px) {
+
+                span {
+
+                    background-color: var(--lightgray-color);
+                }
+            }
         }
     }
 
@@ -77,6 +94,8 @@
         align-items: center;
         flex-direction: column;
         padding-top: 40px;
+        position: relative;
+        z-index: 2;
 
         @media screen and (min-width: 1024px) {
             width: 100%;
@@ -103,6 +122,11 @@
                     margin: unset;
                 }
 
+                span {
+                    background-color: var(--lightgray-color);
+                    border-radius: 50%;
+                }
+
                 p {
                     font-family: var(--font-base);
                     padding-left: 20px;
@@ -114,7 +138,13 @@
 
                     @media screen and (min-width: 1024px) {
                         width: 60%;
+
+                        span {
+
+                            background-color: var(--lightgray-color);
+                        }
                     }
+
                 }
             }
         }
@@ -125,6 +155,8 @@
     width: 100%;
     min-height: 70vh;
 
+    position: relative;
+    z-index: 2;
 
     @media screen and (min-width: 768px) {
         min-height: 50vh;
@@ -158,6 +190,10 @@
             margin-bottom: 30px;
             text-align: right;
 
+            @media screen and (min-width: 1700px) {
+                font-size: 4rem;
+            }
+
             span {
                 display: block;
                 margin-top: -10px;
@@ -181,7 +217,10 @@
             text-align: right;
 
             @media screen and (min-width: 1024px) {
-                background-color: var(--lightgray-color);
+                span {
+
+                    background-color: var(--lightgray-color);
+                }
             }
         }
     }

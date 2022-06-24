@@ -5,7 +5,10 @@ const ServicesAnimation = () => {
   return (
     <div className="servicesSvg-container">
       <div className="servicesSvg-lottie">
-        <Lottie animationData={serviceAnimation} />
+        <Lottie
+          animationData={serviceAnimation}
+          style={{ marginLeft:"7%" }}
+        />
         <div className="div-container">
           <a
             href="/services/insights-regional-intelligence"

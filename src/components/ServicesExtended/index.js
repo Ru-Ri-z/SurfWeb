@@ -32,7 +32,7 @@ const ServicesExtended = () => {
                   opacity: [0, 1],
                   transform: ["translate(-10%)", "translate(0%)"],
                 }}
-                transition={{ duration: 0.5, delay: 1 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
               >
                 {item.title}
               </motion.h2>
@@ -44,7 +44,7 @@ const ServicesExtended = () => {
                   animate={{
                     opacity: [0, 1],
                   }}
-                  transition={{ duration: 0.5, delay: 1.3 }}
+                  transition={{ duration: 0.5, delay: 1 }}
                 >
                   <h5>{description.title}</h5>
                   <p>{description.desc}</p>

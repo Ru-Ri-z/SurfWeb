@@ -9,7 +9,7 @@ const SocialMedia = () => {
   const { width } = useWindowDimensions();
   const [titleRef, titleInView] = useInView({
     triggerOnce: true,
-    rootMargin: "-100px 0px",
+    rootMargin: "-50px 0px",
   });
   return (
     <div className="app__social-media">
@@ -20,7 +20,7 @@ const SocialMedia = () => {
             opacity: titleInView ? 1 : 0,
             transform: titleInView ? "translate(0%)" : "translate(-10%)",
           }}
-          transition={{ duration: 0.5, delay: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           className="app__highlighted-reports-title-h2"
         >
           Follow <span>us</span>

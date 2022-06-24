@@ -8,13 +8,26 @@ import { useInView } from "react-intersection-observer";
 import Monitor from "../../assets/svgs/about/Monitor";
 import Pencil from "../../assets/svgs/about/Pencil";
 import Eye from "../../assets/svgs/about/Eye";
+import wave from "../../assets/wavebackground2.jpg";
 const AboutCeo = () => {
   const [titleRef, titleInView] = useInView({
     triggerOnce: true,
-    rootMargin: "-100px 0px",
+    rootMargin: "-50px 0px",
+  });
+  const [ceoRef, ceoInView] = useInView({
+    triggerOnce: true,
+    rootMargin: "-50px 0px",
   });
   return (
-    <div className="about-section">
+    <div className="about-section" ref={titleRef}>
+      <div
+        style={{ position: "absolute", minHeight: "100vh", marginTop: "80px" }}
+      >
+        <img
+          src={wave}
+          style={{ position: "sticky", zIndex: 0, top: "150px", bottom: "0px" }}
+        />
+      </div>
       <div className="app__about-container" id="about" ref={titleRef}>
         <div className="app__about-container-data">
           <motion.h2
@@ -23,25 +36,27 @@ const AboutCeo = () => {
               opacity: titleInView ? 1 : 0,
               transform: titleInView ? "translate(0%)" : "translate(-10%)",
             }}
-            transition={{ duration: 0.5, delay: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
             About <span>us</span>
           </motion.h2>
           <motion.p
             ref={titleRef}
             animate={{ opacity: titleInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
-            SmC+ is a digital policy strategy firm focused and based in Latin
-            America. SmC+ is today serving global technology companies and
-            international organizations to understand and act in the complex
-            regional policy scene.{" "}
+            <span>
+              SmC+ is a digital policy strategy firm focused and based in Latin
+              America. SmC+ is today serving global technology companies and
+              international organizations to understand and act in the complex
+              regional policy scene.{" "}
+            </span>
           </motion.p>
           <motion.a
             className="button"
             ref={titleRef}
             animate={{ opacity: titleInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
             href="https://twitter.com/search?q=%23SurfTheLatamDigitalPolicyScene&src=typed_query"
             rel="nooponer noreferrer"
             target="_blank"
@@ -53,33 +68,45 @@ const AboutCeo = () => {
           <motion.div
             ref={titleRef}
             animate={{ opacity: titleInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
             <div>
-              <Monitor />
+              <span>
+                <Monitor />
+              </span>
               <p>
-                Experts in digital public affairs with high-level access to
-                regional decision- makers on public policy and strategy
+                <span>
+                  Experts in digital public affairs with high-level access to
+                  regional decision- makers on public policy and strategy
+                </span>
               </p>
             </div>
             <div>
-              <Pencil />
+              <span>
+                <Pencil />
+              </span>
               <p>
-                Brief and visual reports supported by the possibility to access
-                to exclusive primary information
+                <span>
+                  Brief and visual reports supported by the possibility to
+                  access to exclusive primary information
+                </span>
               </p>
             </div>
             <div>
-              <Eye />
+              <span>
+                <Eye />
+              </span>
               <p>
-                High experience in managing the public agenda of national trade
-                associations and multilateral organizations
+                <span>
+                  High experience in managing the public agenda of national
+                  trade associations and multilateral organizations
+                </span>
               </p>
             </div>
           </motion.div>
         </div>
       </div>
-      <div className="app__about-containerCeo" id="nosotros" ref={titleRef}>
+      <div className="app__about-containerCeo" id="nosotros" ref={ceoRef}>
         <div className="app__about-container-imageCeo">
           <div>
             <img src={imageCeo} alt="ceo" />
@@ -92,7 +119,7 @@ const AboutCeo = () => {
                   duration: 2,
                   repeat: Infinity,
                   repeatDelay: 3,
-                  ease:"linear"
+                  ease: "linear",
                 },
                 default: { duration: 1.5, ease: "easeInOut" },
               }}
@@ -104,56 +131,64 @@ const AboutCeo = () => {
         </div>
         <div className="app__about-container-dataCeo">
           <motion.h2
-            ref={titleRef}
+            ref={ceoRef}
             animate={{
-              opacity: titleInView ? 1 : 0,
-              transform: titleInView ? "translate(0%)" : "translate(10%)",
+              opacity: ceoInView ? 1 : 0,
+              transform: ceoInView ? "translate(0%)" : "translate(10%)",
             }}
-            transition={{ duration: 0.5, delay: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
             About <span>Sebastian</span>
           </motion.h2>
           <motion.p
-            ref={titleRef}
-            animate={{ opacity: titleInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
+            ref={ceoRef}
+            animate={{ opacity: ceoInView ? 1 : 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
-            Sebastian Cabello is the Founder and CEO of SmC+. He is an
-            accomplished expert with vast experience driving collective action,
-            public-private partnerships and technology and public policy
-            advocacy in Latin America.
+            <span>
+              Sebastian Cabello is the Founder and CEO of SmC+. He is an
+              accomplished expert with vast experience driving collective
+              action, public-private partnerships and technology and public
+              policy advocacy in Latin America.
+            </span>
           </motion.p>
           <motion.p
-            ref={titleRef}
-            animate={{ opacity: titleInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
+            ref={ceoRef}
+            animate={{ opacity: ceoInView ? 1 : 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
-            SmC+ is a newly established firm providing policy consulting
-            services to the Inter-American Bank (IDB), the Latin American
-            Internet Association (ALAI) as well as key regional players like
-            Microsoft, Google, Facebook, Cisco and American Tower.F
+            <span>
+              SmC+ is a newly established firm providing policy consulting
+              services to the Inter-American Bank (IDB), the Latin American
+              Internet Association (ALAI) as well as key regional players like
+              Microsoft, Google, Facebook, Cisco and American Tower.F
+            </span>
           </motion.p>
           <motion.p
-            ref={titleRef}
-            animate={{ opacity: titleInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
+            ref={ceoRef}
+            animate={{ opacity: ceoInView ? 1 : 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
-            Between 2010 and end-2018, he was Head of Latin America at the GSMA,
-            the global association of the mobile industry, and led the
-            organization’s advocacy activities in the region. Under that tenure,
-            he was a Member of the National Committee on Spectrum of Colombia
-            and the Latin American Internet for All Advisory Committee of the
-            World Economic Forum.
+            <span>
+              Between 2010 and end-2018, he was Head of Latin America at the
+              GSMA, the global association of the mobile industry, and led the
+              organization’s advocacy activities in the region. Under that
+              tenure, he was a Member of the National Committee on Spectrum of
+              Colombia and the Latin American Internet for All Advisory
+              Committee of the World Economic Forum.
+            </span>
           </motion.p>
           <motion.p
-            ref={titleRef}
-            animate={{ opacity: titleInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
+            ref={ceoRef}
+            animate={{ opacity: ceoInView ? 1 : 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
-            He holds a “Licenciado” degree in Economics and a Master in
-            International Affairs from UC San Diego and has been a Fulbright
-            scholar. He is also research fellow at the Center for Technology and
-            Society (CeTyS) at Universidad de San Andres, Argentina.
+            <span>
+              He holds a “Licenciado” degree in Economics and a Master in
+              International Affairs from UC San Diego and has been a Fulbright
+              scholar. He is also research fellow at the Center for Technology
+              and Society (CeTyS) at Universidad de San Andres, Argentina.
+            </span>
           </motion.p>
         </div>
       </div>

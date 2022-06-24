@@ -11,7 +11,7 @@ const NewReport = ({ item }) => {
   });
   const [paraRef, paraInView] = useInView({
     triggerOnce: true,
-    rootMargin: "-10px 0px",
+    rootMargin: "-50px 0px",
   });
   return (
     <div className="app__highlighted-reports-container" id="reports">
@@ -22,7 +22,7 @@ const NewReport = ({ item }) => {
         animate={{ rotate: 360 }}
         transition={{
           rotate: {
-            duration: 30,
+            duration: 20,
             repeat: Infinity,
             repeatDelay: 0,
           },
@@ -35,7 +35,7 @@ const NewReport = ({ item }) => {
             opacity: titleInView ? 1 : 0,
             transform: titleInView ? "translate(0%)" : "translate(-10%)",
           }}
-          transition={{ duration: 0.5, delay: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           New <span>Report</span>
         </motion.h2>
@@ -56,7 +56,7 @@ const NewReport = ({ item }) => {
             className="app__highlighted-reports-slider-paragraphs"
             ref={paraRef}
             animate={{ opacity: paraInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
             <h3>{item.title}</h3>
             {item.paragraphs.map((paragraph, idx) => (

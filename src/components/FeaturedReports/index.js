@@ -11,11 +11,11 @@ import { useInView } from "react-intersection-observer";
 const FeaturedReport = ({ item }) => {
   const [titleRef, titleInView] = useInView({
     triggerOnce: true,
-    rootMargin: "-100px 0px",
+    rootMargin: "-50px 0px",
   });
   const [paraRef, paraInView] = useInView({
     triggerOnce: true,
-    rootMargin: "-100px 0px",
+    rootMargin: "-50px 0px",
   });
   return (
     <div className="app__featured-reports-container" id="reportes">
@@ -26,7 +26,7 @@ const FeaturedReport = ({ item }) => {
             opacity: titleInView ? 1 : 0,
             transform: titleInView ? "translate(0%)" : "translate(-10%)",
           }}
-          transition={{ duration: 0.5, delay: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           Featured <span>Report</span>
         </motion.h2>
@@ -47,7 +47,7 @@ const FeaturedReport = ({ item }) => {
             className="app__highlighted-reports-slider-paragraphs"
             ref={titleRef}
             animate={{ opacity: titleInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
             <h3>{item.title}</h3>
             {item.paragraphs.map((paragraph, idx) => (

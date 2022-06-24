@@ -5,6 +5,8 @@
     grid-template-columns: 100%;
     background-color: var(--lightgray-color);
     background-image: url("../../assets/contactimg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
     @media screen and (min-width: 1024px) {
         grid-template-columns: 50% 50%;
         min-height: 100vh;

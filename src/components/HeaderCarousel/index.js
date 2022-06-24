@@ -1,8 +1,6 @@
 import React from "react";
 import backgroundImage from "../../assets/coverpageimg.webp";
 import backgroundImageMobile from "../../assets/mobile.webp";
-import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
 import "./HeaderCarousel.scss";
 import useWindowsDimensions from "../../hooks/useWindowsDimensions";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -26,33 +24,31 @@ const HeaderCarousel = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <picture style={{ margin: 0, padding: 0 }}>
-            <source srcSet={backgroundImage} media="(min-width: 1024px)" />
-            <img
-              src={backgroundImageMobile}
-              alt="MDN"
-              className="app__header-image-big"
-            />
-          </picture>
+        <SwiperSlide style={{ width: "100%" }}>
+          <img
+            src={backgroundImage}
+            alt="MDN"
+            className="app__header-image-big-carousel"
+          />
+
           {width < 1024 && <h2>Surf the Latam Digital Policy Scene</h2>}
           <div className="app__social-media-icons">
             <a href="#">
-              <SocialOne/>
+              <SocialOne />
             </a>
             <a
               href="https://www.linkedin.com/company/smcplus/"
               rel="nooponer noreferrer"
               target="_blank"
             >
-              <SocialTwo/>
+              <SocialTwo />
             </a>
             <a
               href="https://twitter.com/SMCplus"
               rel="nooponer noreferrer"
               target="_blank"
             >
-              <SocialThree/>
+              <SocialThree />
             </a>
           </div>
         </SwiperSlide>
@@ -63,7 +59,12 @@ const HeaderCarousel = () => {
             controls
             loop
             muted
-            style={{ width: "100%", height: "100vh", backgroundColor: "black" }}
+            style={{
+              width: "100%",
+              height: "100vh",
+              backgroundColor: "black",
+              objectFit: "fill",
+            }}
           />
         </SwiperSlide>
         <SlidePrevButton />

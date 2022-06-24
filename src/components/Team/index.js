@@ -14,7 +14,7 @@ const Team = () => {
   const { width } = useWindowDimensions();
   const [titleRef, titleInView] = useInView({
     triggerOnce: true,
-    rootMargin: "-100px 0px",
+    rootMargin: "-50px 0px",
   });
   return (
     <div className="app__team-container">
@@ -25,7 +25,7 @@ const Team = () => {
             opacity: titleInView ? 1 : 0,
             transform: titleInView ? "translate(0%)" : "translate(-10%)",
           }}
-          transition={{ duration: 0.5, delay: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           Our <span>Team</span>
         </motion.h2>

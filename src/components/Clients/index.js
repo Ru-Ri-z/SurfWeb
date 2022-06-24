@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 const Clients = () => {
   const [titleRef, titleInView] = useInView({
     triggerOnce: true,
-    rootMargin: "-100px 0px",
+    rootMargin: "-50px 0px",
   });
   return (
     <div className="clients-container">
@@ -16,7 +16,7 @@ const Clients = () => {
           opacity: titleInView ? 1 : 0,
           transform: titleInView ? "translate(0%)" : "translate(-10%)",
         }}
-        transition={{ duration: 0.5, delay: 1 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
       >
         Some of the<span> clients we served</span>
       </motion.h2>
