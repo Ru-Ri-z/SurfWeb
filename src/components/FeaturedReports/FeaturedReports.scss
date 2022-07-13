@@ -11,12 +11,12 @@
         margin: auto;
 
         h2 {
-            font-size: 3rem;
+            font-size: 2rem;
             color: var(--white-color);
             font-family: var(--font-base);
             margin-bottom: 30px;
             text-align: left;
-
+            opacity: 0;
             span {
                 display: block;
                 margin-top: -10px;
@@ -58,7 +58,7 @@
                 flex-direction: column;
                 justify-content: center;
                 padding-top: 40px;
-
+                opacity: 0;
                 @media screen and (min-width: 1024px) {
                     padding-top: 0;
                 }
@@ -112,7 +112,7 @@
         background-color: transparent;
         padding: 10px 20px;
         border-radius: 30px;
-        font-size: .8rem;
+        font-size: .6rem;
         text-decoration: none;
         text-align: center;
         font-family: var(--font-base);

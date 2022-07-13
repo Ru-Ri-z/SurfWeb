@@ -3,7 +3,7 @@ import serviceAnimation from "../../assets/IconosExport.json";
 import "./ServicesSvg.scss";
 const ServicesAnimation = () => {
   return (
-    <div className="servicesSvg-container">
+    <div className="servicesSvg-container" id="services">
       <div className="servicesSvg-lottie">
         <Lottie
           animationData={serviceAnimation}

@@ -1,21 +1,42 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./OtherReports.scss";
 import otherReports from "../../utils/constants/otherReports";
 import { FiSearch } from "react-icons/fi";
+import { Suggestions } from "../Suggestions";
+import useClickOutsideRef from "../../hooks/useClickOutsideRef";
 const OtherReports = () => {
+  const [suggestions, setSuggestions] = useState([]);
   const [filterReports, setFilterReports] = useState(otherReports);
   const [input, setInput] = useState("");
-
+  const searchContainer = useRef(null);
+  useClickOutsideRef(searchContainer, setSuggestions);
   const handleChange = (e) => {
     setInput(e.target.value.toLowerCase());
   };
 
+  useEffect(() => {
+    if (input.length < 3) {
+      setSuggestions([]);
+      return;
+    }
+    const filterArr = otherReports.filter((item) =>
+      item.title.toLowerCase().includes(input)
+    );
+    setSuggestions(filterArr);
+  }, [input]);
+
   const handleSearch = () => {
     if (!input) return setFilterReports(otherReports);
     const filterArr = otherReports.filter((item) =>
-      item.date.toLowerCase().includes(input)
+      item.title.toLowerCase().includes(input)
     );
+    setSuggestions([]);
     setFilterReports(filterArr);
+  };
+
+  const onClean = () => {
+    setSuggestions([]);
+    setFilterReports(otherReports);
   };
 
   return (
@@ -25,10 +46,10 @@ const OtherReports = () => {
           Other Reports <span>and surveys</span>
         </h2>
       </div>
-      <div className="other-reports-searcher">
+      <div className="other-reports-searcher" ref={searchContainer}>
         <input
           type="text"
-          placeholder="Buscar por fechas"
+          placeholder="Buscar por títulos"
           value={input}
           onChange={handleChange}
         />
@@ -38,11 +59,23 @@ const OtherReports = () => {
           style={{ paddingLeft: "10px", cursor: "pointer" }}
           onClick={handleSearch}
         />
+        {suggestions?.length > 0 && (
+          <Suggestions
+            suggestions={suggestions}
+            setSuggestions={setSuggestions}
+            setFilterReports={setFilterReports}
+          />
+        )}
+        <button className="clean-search" onClick={onClean}>
+          Limpiar
+        </button>
       </div>
       {filterReports?.length === 0 && (
-        <h3 className="other-reports-no-result">
-          No se encontraron resultados
-        </h3>
+        <div style={{ minHeight: "60vh" }}>
+          <h3 className="other-reports-no-result">
+            No se encontraron resultados
+          </h3>
+        </div>
       )}
       {filterReports.map((item, idx) => (
         <div className="app__slider-container-reports" key={idx}>
@@ -55,6 +88,7 @@ const OtherReports = () => {
                 allow="autoplay"
                 title={`frame1`}
                 loading="lazy"
+                border={0}
               ></iframe>
             </div>
             <div className="app__highlighted-reports-slider-paragraphs">

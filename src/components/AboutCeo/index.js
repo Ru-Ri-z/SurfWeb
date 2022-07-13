@@ -20,14 +20,6 @@ const AboutCeo = () => {
   });
   return (
     <div className="about-section" ref={titleRef}>
-      <div
-        style={{ position: "absolute", minHeight: "100vh", marginTop: "80px" }}
-      >
-        <img
-          src={wave}
-          style={{ position: "sticky", zIndex: 0, top: "150px", bottom: "0px" }}
-        />
-      </div>
       <div className="app__about-container" id="about" ref={titleRef}>
         <div className="app__about-container-data">
           <motion.h2
@@ -36,14 +28,14 @@ const AboutCeo = () => {
               opacity: titleInView ? 1 : 0,
               transform: titleInView ? "translate(0%)" : "translate(-10%)",
             }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
             About <span>us</span>
           </motion.h2>
           <motion.p
             ref={titleRef}
             animate={{ opacity: titleInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
           >
             <span>
               SmC+ is a digital policy strategy firm focused and based in Latin
@@ -56,19 +48,20 @@ const AboutCeo = () => {
             className="button"
             ref={titleRef}
             animate={{ opacity: titleInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
             href="https://twitter.com/search?q=%23SurfTheLatamDigitalPolicyScene&src=typed_query"
             rel="nooponer noreferrer"
             target="_blank"
+            style={{ fontSize: 12 }}
           >
-            Follow #SurfTheLatamDigitalPolicyScene
+            FOLLOW #SURFTHELATAMDIGITALPOLICYSCENE
           </motion.a>
         </div>
         <div className="app__about-container-description">
           <motion.div
             ref={titleRef}
             animate={{ opacity: titleInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
           >
             <div>
               <span>
@@ -136,14 +129,14 @@ const AboutCeo = () => {
               opacity: ceoInView ? 1 : 0,
               transform: ceoInView ? "translate(0%)" : "translate(10%)",
             }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
             About <span>Sebastian</span>
           </motion.h2>
           <motion.p
             ref={ceoRef}
             animate={{ opacity: ceoInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
           >
             <span>
               Sebastian Cabello is the Founder and CEO of SmC+. He is an
@@ -155,33 +148,32 @@ const AboutCeo = () => {
           <motion.p
             ref={ceoRef}
             animate={{ opacity: ceoInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
           >
             <span>
-              SmC+ is a newly established firm providing policy consulting
-              services to the Inter-American Bank (IDB), the Latin American
-              Internet Association (ALAI) as well as key regional players like
-              Microsoft, Google, Facebook, Cisco and American Tower.F
+              Sebastian founded SmC+ in 2020 that has established as a key
+              provider of policy consulting services to global digital and ICT
+              players as well as multilateral institutions in Latin America such
+              as the Inter-American Bank (IDB), CAF Development Bank, UN
+              Economic Commission on Latin America, the Latin American Internet
+              Association (ALAI), and the Fiber Broadband Association.
             </span>
           </motion.p>
           <motion.p
             ref={ceoRef}
             animate={{ opacity: ceoInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
           >
             <span>
               Between 2010 and end-2018, he was Head of Latin America at the
               GSMA, the global association of the mobile industry, and led the
-              organization’s advocacy activities in the region. Under that
-              tenure, he was a Member of the National Committee on Spectrum of
-              Colombia and the Latin American Internet for All Advisory
-              Committee of the World Economic Forum.
+              organization’s advocacy activities in the region.
             </span>
           </motion.p>
           <motion.p
             ref={ceoRef}
             animate={{ opacity: ceoInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
           >
             <span>
               He holds a “Licenciado” degree in Economics and a Master in

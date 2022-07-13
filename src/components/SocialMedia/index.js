@@ -20,7 +20,7 @@ const SocialMedia = () => {
             opacity: titleInView ? 1 : 0,
             transform: titleInView ? "translate(0%)" : "translate(-10%)",
           }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
           className="app__highlighted-reports-title-h2"
         >
           Follow <span>us</span>
@@ -50,7 +50,7 @@ const SocialMedia = () => {
             />
           )}
           <iframe
-            src="https://www.linkedin.com/embed/feed/update/urn:li:share:6923367792129765376"
+            src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6952389094635155457"
             height="650"
             width={width < 768 ? "100%" : "504"}
             frameBorder="0"

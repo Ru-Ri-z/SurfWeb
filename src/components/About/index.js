@@ -44,7 +44,7 @@ const About = () => {
           rel="nooponer noreferrer"
           target="_blank"
         >
-          Follow #SurfTheLatamDigitalPolicyScene
+          Follow #SURFTHELATAMDIGITALPOLICYSCENE
         </motion.a>
       </div>
       <div className="app__about-container-description">

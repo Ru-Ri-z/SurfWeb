@@ -3,11 +3,10 @@
     position: relative;
 
     @media screen and (min-width: 1024px) {
-        //background-image: url("../../assets/wavebackground.jpeg");
-        //background-size: cover;
-        //background-position: center;
-        //background-repeat: no-repeat;
-        //background-attachment: fixed;
+        background-image: url("../../assets/wavebackground.jpeg");
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
     }
 }
 
@@ -45,11 +44,12 @@
         }
 
         h2 {
-            font-size: 3rem;
+            font-size: 2rem;
             color: var(--blue-color);
             font-family: var(--font-base);
             margin: 0px;
             padding-bottom: 20px;
+            opacity: 0;
 
             @media screen and (min-width: 1700px) {
                 font-size: 4rem;
@@ -72,13 +72,14 @@
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 0.8rem;
             color: var(--gray-color);
             font-family: var(--font-base);
             margin-bottom: 40px;
+            opacity: 0;
 
             @media screen and (min-width: 1024px) {
-
+                font-size: 1.1rem;
                 span {
 
                     background-color: var(--lightgray-color);
@@ -131,14 +132,14 @@
                     font-family: var(--font-base);
                     padding-left: 20px;
                     width: 90%;
-                    font-size: 1.1rem;
+                    font-size: 0.8rem;
                     color: var(--blue-color);
                     font-weight: 600;
                     margin-bottom: 40px;
 
                     @media screen and (min-width: 1024px) {
                         width: 60%;
-
+                        font-size: 1.1rem;
                         span {
 
                             background-color: var(--lightgray-color);
@@ -180,15 +181,16 @@
         }
 
         @media screen and (min-width: 1024px) {
-            width: 60%;
+            width: 70%;
         }
 
         h2 {
-            font-size: 3rem;
+            font-size: 2rem;
             color: var(--blue-color);
             font-family: var(--font-base);
             margin-bottom: 30px;
             text-align: right;
+            opacity: 0;
 
             @media screen and (min-width: 1700px) {
                 font-size: 4rem;
@@ -210,15 +212,16 @@
         }
 
         p {
-            font-size: .9rem;
+            font-size: 0.8rem;
             color: var(--gray-color);
             font-family: var(--font-base);
             margin-bottom: 20px;
             text-align: right;
+            opacity: 0;
 
             @media screen and (min-width: 1024px) {
                 span {
-
+                    font-size: 1.1rem;
                     background-color: var(--lightgray-color);
                 }
             }

@@ -35,7 +35,7 @@ const NewReport = ({ item }) => {
             opacity: titleInView ? 1 : 0,
             transform: titleInView ? "translate(0%)" : "translate(-10%)",
           }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
         >
           New <span>Report</span>
         </motion.h2>
@@ -56,7 +56,7 @@ const NewReport = ({ item }) => {
             className="app__highlighted-reports-slider-paragraphs"
             ref={paraRef}
             animate={{ opacity: paraInView ? 1 : 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
           >
             <h3>{item.title}</h3>
             {item.paragraphs.map((paragraph, idx) => (

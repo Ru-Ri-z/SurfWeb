@@ -22,7 +22,7 @@ const Header = () => {
       </picture>
       {width < 1024 && <h2>Surf the Latam Digital Policy Scene</h2>}
       <div className="app__social-media-icons">
-        <a href="#">
+        <a href="mailto:smcconsultingweb@gmail.com">
           <SocialOne />
         </a>
         <a

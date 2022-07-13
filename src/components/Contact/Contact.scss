@@ -43,10 +43,11 @@
                 width: 60%;
             }
             h2 {
-                font-size: 3rem;
+                font-size: 2rem;
                 color: var(--darkgreen-color);
                 font-family: var(--font-base);
                 margin-bottom: 30px;
+                opacity: 0;
                 @media screen and (min-width: 768px){
                     font-size: 4rem;
                 }
@@ -81,14 +82,14 @@
                     margin-bottom: 30px;
                     padding: 13px 10px;
                     border: 1px solid var(--lightgray-color);
-                    // box-shadow: 2px 18px 33px -27px rgba(0, 0, 0, 0.64);
-                    // -webkit-box-shadow: 2px 18px 33px -27px rgba(0, 0, 0, 0.64);
-                    // -moz-box-shadow: 2px 18px 33px -27px rgba(0, 0, 0, 0.64);
+                    font-family: var(--font-base);
+                    
                 }
 
                 textarea::placeholder {
                     font-size: 1rem;
                     color: #adadad;
+                    font-family: var(--font-base);
                 }
 
                 input[type=submit] {

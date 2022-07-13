@@ -16,7 +16,7 @@ const Clients = () => {
           opacity: titleInView ? 1 : 0,
           transform: titleInView ? "translate(0%)" : "translate(-10%)",
         }}
-        transition={{ duration: 0.5, delay: 0.4 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
       >
         Some of the<span> clients we served</span>
       </motion.h2>

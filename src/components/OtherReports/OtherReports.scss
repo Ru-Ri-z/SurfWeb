@@ -3,6 +3,7 @@
     margin: 0px auto;
     padding-top: 80px;
 
+
     h2 {
         font-size: 3rem;
         color: var(--blue-color);
@@ -31,21 +32,62 @@
 .other-reports-searcher {
     display: flex;
     justify-content: center;
-    
+    position: relative;
+    width: 75%;
+    margin: auto;
+    border: 1px solid #adadad99;
+    padding-left: 10px;
+    padding-right: 10px;
+    .clean-search {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: var(--font-base);
+        color: var(--gray-color);
+        padding-left: 10px;
+        font-size: .8rem;
+    }
+
     input {
-        width: 80%;
+        width: 100%;
         text-align: center;
         height: 40px;
-        border: 1px solid #adadad99;
-        border-radius: 20px;
+        border: none;
         font-family: var(--font-base);
         font-size: 1rem;
         outline: none;
-        @media screen and (min-width: 768px) {
-            width: 50%;
+
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 50%;
+        
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 40%;
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        .clean-search {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-base);
+            color: var(--gray-color);
+            padding-left: 10px;
+            font-size: 1rem;
         }
-        @media screen and (min-width: 1024px) {
-            width: 30%;
+
+        input {
+            width: 100%;
+            text-align: center;
+            height: 40px;
+            border: none;
+            font-family: var(--font-base);
+            font-size: 1rem;
+            outline: none;
+
         }
     }
 }

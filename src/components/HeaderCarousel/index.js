@@ -1,6 +1,7 @@
 import React from "react";
 import backgroundImage from "../../assets/coverpageimg.webp";
 import backgroundImageMobile from "../../assets/mobile.webp";
+import bannernewreport from "../../assets/bannernewreport.jpeg";
 import "./HeaderCarousel.scss";
 import useWindowsDimensions from "../../hooks/useWindowsDimensions";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,6 +14,7 @@ import SlideNextButton from "./SlideNextButton";
 import SocialOne from "../../assets/svgs/social/SocialOne";
 import SocialTwo from "../../assets/svgs/social/SocialTwo";
 import SocialThree from "../../assets/svgs/social/SocialThree";
+import pdf from "../../assets/pdfs/compraspublicas.pdf";
 const HeaderCarousel = () => {
   const { width } = useWindowsDimensions();
   return (
@@ -33,7 +35,7 @@ const HeaderCarousel = () => {
 
           {width < 1024 && <h2>Surf the Latam Digital Policy Scene</h2>}
           <div className="app__social-media-icons">
-            <a href="#">
+          <a href="mailto:smcconsultingweb@gmail.com">
               <SocialOne />
             </a>
             <a
@@ -66,6 +68,39 @@ const HeaderCarousel = () => {
               objectFit: "fill",
             }}
           />
+        </SwiperSlide>
+        <SwiperSlide style={{ width: "100%", position: "relative" }}>
+          <img
+            src={bannernewreport}
+            alt="MDN"
+            className="app__header-image-big-carousel"
+          />
+          <div
+            style={{
+              position: "absolute",
+              zIndex: "99999",
+              bottom: "10%",
+              left: "6%",
+            }}
+          >
+            <a
+              href={pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              download="compraspublicas.pdf"
+              style={{
+                border: "2px solid #fff",
+                padding: "10px 20px",
+                borderRadius: "30px",
+                color: "#fff",
+                textDecoration:"none",
+                fontFamily:"sans-serif",
+                fontSize:"1.3rem"
+              }}
+            >
+              Download
+            </a>
+          </div>
         </SwiperSlide>
         <SlidePrevButton />
         <SlideNextButton />

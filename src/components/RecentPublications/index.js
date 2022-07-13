@@ -27,14 +27,6 @@ const RecentPublications = () => {
           },
         }}
       />
-      <a
-        href="/other-reports"
-        target="_blank"
-        rel="nooponer noreferrer"
-        className="button"
-      >
-        More Publications
-      </a>
     </div>
   );
 };

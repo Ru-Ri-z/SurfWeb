@@ -31,8 +31,8 @@ const Home = () => {
       {width < 1024 && <Services />}
       <NewReport item={newReport} />
       <FeaturedReport item={featuredReport} />
-      {width > 1024 && <RecentPublications />}
       <SocialMedia />
+      {/* {width > 1024 && <RecentPublications />} */}
       <Clients />
       <Contact />
     </div>

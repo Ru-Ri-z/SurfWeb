@@ -2,16 +2,19 @@
     display: flex;
     flex-direction: column;
     background-color: var(--lightgray-color);
+
     .app__highlighted-reports-title-h2-container {
-        width: 75%;
+        width: 80%;
         margin: auto;
         padding-top: 40px;
+
         .app__highlighted-reports-title-h2 {
             font-size: 3rem;
             color: var(--blue-color);
             font-family: var(--font-base);
             margin-bottom: 30px;
             text-align: left;
+            opacity: 0;
 
             span {
                 display: block;
@@ -36,14 +39,17 @@
         flex-direction: column;
         gap: 50px;
         padding: 20px 0 20px;
-        @media screen and (min-width: 1024px){
+
+        @media screen and (min-width: 1024px) {
             padding: 40px 0 100px;
         }
-        div{
+
+        div {
             width: 100%;
             display: flex;
             flex-direction: column;
-            @media screen and (min-width: 1024px){
+
+            @media screen and (min-width: 1024px) {
                 width: unset;
             }
         }
